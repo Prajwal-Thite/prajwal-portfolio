@@ -1,13 +1,11 @@
-// api/groq.ts
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { Groq } from 'groq-sdk';
-import fetch from 'node-fetch';
+// api/groq.cjs
+const { Groq } = require('groq-sdk');
+const fetch = require('node-fetch');
 
+const SITE_URL = 'https://prajwal-portfolio-zeta.vercel.app'; // Your deployed portfolio URL
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-const SITE_URL = 'https://prajwal-portfolio-zeta.vercel.app'; // Replace with your actual deployed URL
-
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
@@ -38,4 +36,4 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.error('Groq API error:', err);
     res.status(500).json({ error: 'Internal server error' });
   }
-}
+};
