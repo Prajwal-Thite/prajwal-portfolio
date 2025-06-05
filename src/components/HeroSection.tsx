@@ -80,7 +80,7 @@ const HeroSection = () => {
             variant="outline"
             size="lg"
             className="group hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300"
-            onClick={() => window.open('https://github.com', '_blank')} data-id="ui7q0eonq" data-path="src/components/HeroSection.tsx">
+            onClick={() => window.open('https://github.com/Prajwal-Thite', '_blank')} data-id="ui7q0eonq" data-path="src/components/HeroSection.tsx">
 
             <Github className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" data-id="r2ox2tpow" data-path="src/components/HeroSection.tsx" />
             GitHub
@@ -91,7 +91,7 @@ const HeroSection = () => {
             variant="outline"
             size="lg"
             className="group hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300"
-            onClick={() => window.open('https://linkedin.com', '_blank')} data-id="t601u9svy" data-path="src/components/HeroSection.tsx">
+            onClick={() => window.open('https://www.linkedin.com/in/prajwal-thite/', '_blank')} data-id="t601u9svy" data-path="src/components/HeroSection.tsx">
 
             <Linkedin className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" data-id="yblhjfrrb" data-path="src/components/HeroSection.tsx" />
             LinkedIn

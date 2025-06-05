@@ -2,7 +2,7 @@
 import { Groq } from 'groq-sdk';
 import fetch from 'node-fetch';
 
-const SITE_URL = 'https://prajwal-portfolio-zeta.vercel.app'; // Your deployed portfolio URL
+const SITE_URL = 'https://prajwal-portfolio-chi.vercel.app/'; // Your deployed portfolio URL
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export default async function handler(req, res) {

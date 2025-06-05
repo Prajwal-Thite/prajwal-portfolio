@@ -268,7 +268,7 @@ const ProjectsSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.open('https://github.com/Prajwal-Thite', '_blank')} 
+            onClick={() => window.open('https://github.com/Prajwal-Thite?tab=repositories', '_blank')} 
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300" data-id="wazba042o" data-path="src/components/ProjectsSection.tsx">             
             View All Projects on GitHub
           </motion.button>

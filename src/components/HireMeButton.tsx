@@ -31,7 +31,7 @@ const HireMeButton = ({ onClick }: HireMeButtonProps) => {
         className="relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
         size="lg" data-id="0ezomo817" data-path="src/components/HireMeButton.tsx">
 
-        Hire Me
+        Contact Me
       </Button>
       
       {/* Ripple effect */}
