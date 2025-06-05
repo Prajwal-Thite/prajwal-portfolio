@@ -1,5 +1,5 @@
 export const generateResponse_ai = async (prompt: string) => {
-  const response = await fetch('http://localhost:5000/api/groq', {
+  const response = await fetch('/api/groq', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
