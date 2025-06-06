@@ -1,8 +1,9 @@
 // api/groq.js
 import { Groq } from 'groq-sdk';
 import fetch from 'node-fetch';
+import { portfolioData } from '../src/components/Portfolio_knowledge_base';
 
-const SITE_URL = 'https://prajwalthite-portfolio.vercel.app/'; // Your deployed portfolio URL
+// const SITE_URL = 'https://prajwalthite-portfolio.vercel.app/'; // Your deployed portfolio URL
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export default async function handler(req, res) {
@@ -13,15 +14,27 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
 
   try {
-    const siteRes = await fetch(SITE_URL);
-    const html = await siteRes.text();
-    const content = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 3000);
+    // const siteRes = await fetch(SITE_URL);
+    // const html = await siteRes.text();
+    // const content = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 3000);
 
+    // const completion = await groq.chat.completions.create({
+    //   messages: [
+    //     {
+    //       role: 'system',
+    //       content: `You are a concise and helpful assistant for Prajwal Thite's portfolio website. Answer questions clearly in 2–3 sentences max. Focus only on the user's question, and avoid repeating the question or adding unnecessary detail. Here is the scraped content: ${content}`,
+    //     },
+    //     {
+    //       role: 'user',
+    //       content: prompt,
+    //     },
+    //   ],
+    //   model: 'llama-3.3-70b-versatile',
     const completion = await groq.chat.completions.create({
       messages: [
         {
           role: 'system',
-          content: `You are a concise and helpful assistant for Prajwal Thite's portfolio website. Answer questions clearly in 2–3 sentences max. Focus only on the user's question, and avoid repeating the question or adding unnecessary detail. Here is the scraped content: ${content}`,
+          content: `You are a knowledgeable assistant for Prajwal Thite's portfolio. Use this portfolio data to answer questions accurately: ${JSON.stringify(portfolioData)}. Focus on providing specific, relevant information from the portfolio data.`,
         },
         {
           role: 'user',
@@ -29,6 +42,8 @@ export default async function handler(req, res) {
         },
       ],
       model: 'llama-3.3-70b-versatile',
+      temperature: 0.7,
+      
     });
 
     res.status(200).json({ text: completion.choices[0]?.message?.content || 'No response' });
