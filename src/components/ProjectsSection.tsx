@@ -82,7 +82,7 @@ const projects: Project[] = [
   longDescription: `Auto-Shading Smart Glasses is a physical computing project that aims to create adaptive sunglasses using two alternative implementations. The first approach uses a mechanical shutter system inspired by motorized window blinds, mounted on ski goggles for stability. The second approach explores a more elegant solution using electrochromic glass—smart film wrapped around conventional glasses that darkens automatically when exposed to sunlight. This system relies on UV sensors and Arduino-based microcontrollers to detect sunlight and trigger shading via a low-voltage electric current. Designed for everyday use, the project highlights comfort, adaptability, and real-world usability in wearable electronics.`,
   techStack: ['Arduino', 'Electronics', 'UV Sensors', 'Smart Film', 'Embedded Systems', 'Physical Computing'],
   githubUrl: 'https://gitlab.inf.uni-konstanz.de/ag-hci/lectures/physical-computing/ss23-physical-computing/phys-comp-ss-23-group-1',
-  imageUrl: 'https://gitlab.inf.uni-konstanz.de/ag-hci/lectures/physical-computing/ss23-physical-computing/phys-comp-ss-23-group-1/-/raw/main/Weekly%20Reports/Figures/101.jpg', // Replace with real photo if available
+  imageUrl: 'https://i.imgur.com/KfdMIV8.jpeg', // Replace with real photo if available
   demoVideoUrl: '', // Add if you have a demo
   category: 'AI', // Can also be 'Web' or 'Mobile' if it's digitally controlled
   featured: true
@@ -95,7 +95,7 @@ const projects: Project[] = [
   longDescription: `Servo Hand is an innovative AI-driven robotic hand that supports multiple control mechanisms including potentiometers, an Android app, and autonomous navigation. Designed for precision and adaptability, the system features 3-axis movement adjustment and global control via IoT. The hand intelligently learns its environment over 20–25 hours using reinforcement learning and Thompson sampling to ensure safe, smooth operation. Built with Java-based Android app communication, embedded C for hardware control, and NodeMCU ESP8266 microcontroller, it represents a fusion of machine learning, embedded systems, and mobile development.`,
   techStack: ['Java', 'Android', 'Embedded C', 'NodeMCU ESP8266', 'Reinforcement Learning', 'IoT', 'Thompson Sampling'],
   githubUrl: 'https://github.com/Prajwal-Thite/Servohand',
-  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZJNeUO7ApXcu1LbU7KH5FFzhzwj7QlyyjpA&s', // You can replace this with a real image if available
+  imageUrl: 'https://akikorhonen.org/content/projects/pages/builds/robot-hand/.full/servohand_1_23052008_ak.jpg', // You can replace this with a real image if available
   demoVideoUrl: '', // Optional: Add if you have one
   category: 'AI',
   featured: false

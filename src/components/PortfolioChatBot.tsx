@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import ChatMessage from '@/components/ChatMessage';
-// import { generateResponse } from '@/components/PortfolioKnowledgeBase';
 import { generateResponse_ai } from '@/lib/groqConfig';
 
 
@@ -39,36 +38,6 @@ const PortfolioChatBot = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-
-// Modify your generateResponse function to include section navigation
-  // const handleSendMessage = async () => {
-  //   if (!inputValue.trim()) return;
-
-  //   const userMessage: Message = {
-  //     id: Date.now().toString(),
-  //     text: inputValue,
-  //     isBot: false,
-  //     timestamp: new Date()
-  //   };  
-
-  //   setMessages((prev) => [...prev, userMessage]);
-  //   setInputValue('');
-  //   setIsTyping(true);
-
-  //   // Simulate typing delay
-  //   setTimeout(() => {
-  //     const response = generateResponse(inputValue);
-  //     const botMessage: Message = {
-  //       id: (Date.now() + 1).toString(),
-  //       text: response.text,
-  //       isBot: true,
-  //       timestamp: new Date()
-  //     };
-
-  //     setMessages((prev) => [...prev, botMessage]);
-  //     setIsTyping(false);
-  //   }, 1000 + Math.random() * 1000); // Random delay between 1-2 seconds
-  // };
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -110,10 +79,11 @@ const PortfolioChatBot = () => {
 
 
   const quickQuestions = [
-  "Tell me about the AI projects",
-  "What's your experience?",
-  "What technologies do you use?",
-  "How can I contact you?"];
+  "What projects have you worked on?",
+  "Can you share your experience in web development?",
+  "Which technologies are you most comfortable with?",
+  "How can I get in touch with you?",    
+  ];
 
 
   const handleQuickQuestion = (question: string) => {
@@ -277,32 +247,7 @@ const PortfolioChatBot = () => {
                           Press Enter to send • AI responses may take a moment
                         </p>
                       </div>
-
-                      {/* Input Area
-                      <div className="p-4 border-t bg-white">
-                        <div className="flex gap-2">
-                          <Input
-                            value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
-                            onKeyPress={handleKeyPress}
-                            placeholder="Ask me anything about this portfolio..."
-                            className="flex-1"
-                            disabled={isTyping}
-                          />
-
-                          <Button
-                            onClick={handleSendMessage}
-                            disabled={!inputValue.trim() || isTyping}
-                            className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
-                            size="icon"
-                          >
-                            <Send className="w-4 h-4" />
-                          </Button>
-                        </div>
-                        <p className="text-xs text-gray-500 mt-2">
-                          Press Enter to send • AI responses may take a moment
-                        </p>
-                      </div> */}
+                      
                     </CardContent>
                   </motion.div>
               }

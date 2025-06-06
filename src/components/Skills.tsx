@@ -13,6 +13,32 @@ import {
 import SkillCard from "@/components/SkillCard";
 import { Button } from "@/components/ui/button";
 
+import {
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiPython,
+  SiPhp,
+  SiLaravel,
+  SiNodedotjs,
+  SiExpress,
+  SiDocker,
+  SiPostgresql,
+  SiMysql,
+  SiFirebase,
+  SiGit,
+  SiPostman,
+  SiKubernetes,
+  SiOpenai,
+  SiTensorflow,
+  SiGraphql,  
+} from "react-icons/si";
+
+import { FaBrain, FaBook, FaCogs } from "react-icons/fa";
+
 const Skills = () => {
   const [activeFilter, setActiveFilter] = useState<string>('All');
 
@@ -23,15 +49,13 @@ const Skills = () => {
     color: "bg-gradient-to-br from-blue-500 to-blue-600",
     category: "Frontend",
     skills: [
-    { name: "React", level: 95, projects: 5, description: "Expert in hooks, context, and performance optimization" },
-    { name: "TypeScript", level: 90, projects: 4, description: "Strong typing and advanced type manipulation" },
-    // { name: "Next.js", level: 88, projects: 5, description: "SSR, SSG, and full-stack development" },
-    { name: "Tailwind CSS", level: 80, projects: 3, description: "Rapid UI development and custom design systems" },
-    { name: "JavaScript", level: 98, projects: 3, description: "ES6+, async programming, and DOM manipulation" },
-    { name: "HTML5", level: 90, projects: 3, description: "Semantic markup and accessibility best practices" },
-    { name: "CSS3", level: 90, projects: 3, description: "Flexbox, Grid, animations, and responsive design" },
-    { name: "Redux", level: 30, projects: 0, description: "Handled global state in React apps for predictable data flow" },
-    // { name: "Vue.js", level: 75, projects: 3, description: "Component-based architecture and state management" }
+    { name: "React", icon: SiReact, color: "#61DAFB", projects: 5, description: "Expert in hooks, context, and performance optimization" },
+    { name: "TypeScript", icon:  SiTypescript, color: "#3178C6", projects: 4, description: "Strong typing and advanced type manipulation" },    
+    { name: "JavaScript", icon: () => <img src="/icons/javascript.svg" alt="javascript" className="w-8 h-8" />, projects: 3, description: "ES6+, async programming, and DOM manipulation" },
+    { name: "Tailwind CSS", icon:  SiTailwindcss, color: "#61DAFB", projects: 3, description: "Rapid UI development and custom design systems" },    
+    { name: "HTML5", icon: SiHtml5, color: "#FFCA28", projects: 3, description: "Semantic markup and accessibility best practices" },
+    { name: "CSS3", icon: SiCss3, color: "#06B6D4", projects: 3, description: "Flexbox, Grid, animations, and responsive design" },
+    { name: "Redux", icon: () => <img src="/icons/redux.svg" alt="redux" className="w-6 h-6" /> , projects: 0, description: "Handled global state in React apps for predictable data flow" },
   ]
 
   },
@@ -41,15 +65,11 @@ const Skills = () => {
     color: "bg-gradient-to-br from-green-500 to-green-600",
     category: "Backend",
     skills: [
-    { name: "PHP", level: 95, projects: 1, description: "Backend development using Laravel and full-stack integrations" },
-    { name: "Python", level: 90, projects: 2, description: "Django, Flask, and data processing" },
-    { name: "Laravel", level: 90, projects: 1, description: "Developed RESTful APIs, admin panels, and full-stack features using Laravel" },
-    { name: "Node.js", level: 75, projects: 1, description: "RESTful APIs and microservices architecture" },
-    { name: "Express.js", level: 80, projects: 1, description: "Middleware, routing, and API development" },
-    // { name: "PostgreSQL", level: 83, projects: 6, description: "Complex queries and database optimization" },
-    // { name: "MongoDB", level: 78, projects: 4, description: "NoSQL design and aggregation pipelines" },
-    // { name: "GraphQL", level: 75, projects: 3, description: "Schema design and query optimization" },
-    // { name: "Redis", level: 70, projects: 3, description: "Caching strategies and session management" }
+    { name: "PHP", icon: SiPhp, color: "#7b7fb5", projects: 1, description: "Backend development using Laravel and full-stack integrations" },
+    { name: "Python", icon: () => <img src="/icons/python.svg" alt="python" className="w-7 h-7" />, color: "#3776AB", projects: 2, description: "Django, Flask, and data processing" },
+    { name: "Laravel", icon: SiLaravel, color: "#f6361c", projects: 1, description: "Developed RESTful APIs, admin panels, and full-stack features using Laravel" },
+    { name: "Node.js", icon: SiNodedotjs, color: "#83bf26", projects: 1, description: "RESTful APIs and microservices architecture" },
+    { name: "Express.js", icon: SiExpress, color: "#002233", projects: 1, description: "Middleware, routing, and API development" },
   ]
 
   },
@@ -59,13 +79,13 @@ const Skills = () => {
     color: "bg-gradient-to-br from-purple-500 to-purple-600",
     category: "AI",
     skills: [
-    { name: "NLP", level: 88, projects: 1, description: "Text processing and sentiment analysis" },
-    { name: "n8n", level: 75, projects: 1, description: "Used for workflow automation, API integrations, and low-code backend logic" },
-    { name: "Kaggle Notebook", level: 60, projects: 2, description: "Utilized to train, test, and validate ML models in real-world datasets" },
-    { name: "TensorFlow", level: 50, projects: 1, description: "Deep learning and neural network training" },
+    { name: "NLP", icon: FaBrain, projects: 1, description: "Text processing and sentiment analysis" },
+    { name: "n8n", icon: FaCogs, projects: 1, description: "Used for workflow automation, API integrations, and low-code backend logic" },
+    { name: "Kaggle Notebook", icon: () => <img src="/icons/kaggle.svg" alt="kaggle" className="w-7 h-7" />, projects: 2, description: "Utilized to train, test, and validate ML models in real-world datasets" },
+    { name: "TensorFlow", icon: SiTensorflow, color: "#fe8724", projects: 1, description: "Deep learning and neural network training" },
     // { name: "PyTorch", level: 75, projects: 2, description: "Research-oriented ML model development" },
     // { name: "Scikit-learn", level: 40, projects: 0, description: "Classical ML algorithms and data preprocessing" },
-    { name: "OpenAI API", level: 70, projects: 1, description: "GPT integration and prompt engineering" },    
+    { name: "OpenAI API", icon: SiOpenai, color: "#fffff", projects: 1, description: "GPT integration and prompt engineering" },    
     // { name: "NumPy", level: 83, projects: 5, description: "Numerical computing and array operations" },    
     ]
 
@@ -76,13 +96,13 @@ const Skills = () => {
     color: "bg-gradient-to-br from-orange-500 to-orange-600",
     category: "Tools",
     skills: [
-    { name: "Salesforce", level: 90, projects: 0, description: "Worked with Salesforce CRM platforms; certified as AI Associate and Administrator" },
-    { name: "Git", level: 95, projects: 10, description: "Version control and collaborative workflows" },
-    { name: "Postman", level: 72, projects: 4, description: "Used for testing REST APIs, automating requests, and validating backend responses" },
-    { name: "Docker", level: 50, projects: 1, description: "Containerization and multi-stage builds" },
+    { name: "Salesforce", icon: () => <img src="/icons/salesforce.svg" alt="Salesforce" className="w-8 h-8" />, projects: 0, description: "Worked with Salesforce CRM platforms; certified as AI Associate and Administrator" },
+    { name: "Git", icon: SiGit, color: "#f32b3b", projects: 10, description: "Version control and collaborative workflows" },
+    { name: "Postman", icon: SiPostman, color: "#ff6c37", projects: 4, description: "Used for testing REST APIs, automating requests, and validating backend responses" },
+    { name: "Docker", icon: SiDocker, color: "#2396ee", projects: 1, description: "Containerization and multi-stage builds" },
     // { name: "AWS", level: 82, projects: 5, description: "EC2, S3, Lambda, and cloud architecture" }, 
     // { name: "GitHub Actions", level: 78, projects: 4, description: "CI/CD pipelines and automated testing" },
-    { name: "Kubernetes", level: 50, projects: 2, description: "Container orchestration and scaling" },
+    { name: "Kubernetes", icon: SiKubernetes, color: "#3a71e6", projects: 2, description: "Container orchestration and scaling" },
     // { name: "Jenkins", level: 68, projects: 2, description: "Build automation and deployment pipelines" }
   ]
 
@@ -93,15 +113,12 @@ const Skills = () => {
     color: "bg-gradient-to-br from-red-500 to-red-600",
     category: ["Frontend", "Backend"],
     skills: [
-    { name: "React.js", level: 95, projects: 4, description: "Built dynamic UIs for research and production apps" },
-    { name: "Express.js", level: 80, projects: 1, description: "Developed backend APIs and middleware for Node.js services" },
-    { name: "Laravel", level: 90, projects: 1, description: "Created backend features and APIs for full-stack apps" },
-    { name: "Redux", level: 30, projects: 0, description: "Handled global state in React apps for predictable data flow" },
-    { name: "Node.js", level: 75, projects: 1, description: "Backend development, server logic, and integration with databases" },
-    { name: "Tailwind CSS", level: 80, projects: 3, description: "Rapid UI development and custom design systems" },
-    // { name: "Ant Design", level: 75, projects: 2, description: "Enterprise-class UI components" },
-    // { name: "React Hook Form", level: 87, projects: 7, description: "Form validation and performance optimization" },
-    // { name: "React Router", level: 90, projects: 8, description: "Client-side routing and navigation" }
+    { name: "React.js", icon: SiReact, color: "#61DAFB", projects: 4, description: "Built dynamic UIs for research and production apps" },
+    { name: "Express.js", icon: SiExpress, color: "#002233", projects: 1, description: "Developed backend APIs and middleware for Node.js services" },
+    { name: "SiLaravel", icon: SiLaravel, color: "#f6361c", projects: 1, description: "Created backend features and APIs for full-stack apps" },
+    { name: "Redux", icon: () => <img src="/icons/redux.svg" alt="redux" className="w-8 h-8" />, projects: 0, description: "Handled global state in React apps for predictable data flow" },
+    { name: "Node.js", icon: SiNodedotjs, color: "#83bf26", projects: 1, description: "Backend development, server logic, and integration with databases" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#61DAFB", projects: 3, description: "Rapid UI development and custom design systems" }, 
   ]
 
   },
@@ -112,15 +129,11 @@ const Skills = () => {
     category: "Backend",
     skills: [
     // { name: "Supabase", level: 83, projects: 4, description: "Real-time subscriptions and auth" },
-    { name: "MySQL", level: 98, projects: 4, description: "Relational database design and optimization" },
-    { name: "PostgreSQL", level: 95, projects: 1, description: "Designed and queried relational databases for full-stack applications using SQL" },
-    { name: "Firebase", level: 50, projects: 5, description: "Real-time database and cloud functions" },
-    // { name: "Prisma", level: 78, projects: 3, description: "Type-safe database access and migrations" },
-    { name: "SQLite", level: 85, projects: 0, description: "Embedded database solutions" },
-    // { name: "DynamoDB", level: 72, projects: 2, description: "NoSQL scaling and performance" },
-    // { name: "InfluxDB", level: 65, projects: 1, description: "Time-series data management" }
+    { name: "MySQL", icon: () => <img src="/icons/mysql.svg" alt="mysql" className="w-9 h-9" />, projects: 4, description: "Relational database design and optimization" },
+    { name: "PostgreSQL", icon: () => <img src="/icons/postgresql.svg" alt="postgresql" className="w-7 h-7" />, color:"#3a6c94", projects: 1, description: "Designed and queried relational databases for full-stack applications using SQL" },
+    { name: "Firebase", icon: () => <img src="/icons/firebase.svg" alt="firebase" className="w-8 h-8" />, projects: 5, description: "Real-time database and cloud functions" },
+    { name: "GraphQL", icon: SiGraphql , color: "#e63bad", projects: 0, description: "Embedded database solutions" },
   ]
-
   }];
 
 
@@ -213,7 +226,7 @@ const Skills = () => {
               Skills Overview
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8" data-id="766puiiwn" data-path="src/components/Skills.tsx">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8" data-id="766puiiwn" data-path="src/components/Skills.tsx">
               <div className="text-center" data-id="z11kg1psq" data-path="src/components/Skills.tsx">
                 <motion.div
                   initial={{ scale: 0 }}
@@ -238,23 +251,8 @@ const Skills = () => {
                   )-60}+
                 </motion.div>
                 <p className="text-gray-600 dark:text-gray-300" data-id="jtlv26gom" data-path="src/components/Skills.tsx">Projects</p>
-              </div>
-              
-              <div className="text-center" data-id="3ma9cbc4i" data-path="src/components/Skills.tsx">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.7, duration: 0.2 }}
-                  className="text-3xl font-bold text-purple-500 mb-2" data-id="3v6qd4nz9" data-path="src/components/Skills.tsx">
+              </div>           
 
-                  {Math.round(
-                    skillsData.reduce((acc, category) =>
-                    acc + category.skills.reduce((skillAcc, skill) => skillAcc + skill.level, 0) / category.skills.length, 0
-                    ) / skillsData.length
-                  )}%
-                </motion.div>
-                <p className="text-gray-600 dark:text-gray-300" data-id="17v1bm5rd" data-path="src/components/Skills.tsx">Avg. Proficiency</p>
-              </div>
               
               <div className="text-center" data-id="2ptnsiydr" data-path="src/components/Skills.tsx">
                 <motion.div

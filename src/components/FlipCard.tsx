@@ -53,7 +53,7 @@ const FlipCard = ({ frontContent, backContent, className = '' }: FlipCardProps) 
 
           <div className="w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 rounded-xl shadow-lg flex flex-col items-center justify-center text-white p-6" data-id="yd4022942" data-path="src/components/FlipCard.tsx">
             <h3 className="text-lg font-bold mb-4" data-id="gkolx8j4i" data-path="src/components/FlipCard.tsx">{backContent.title}</h3>
-            <ul className="text-sm space-y-2 text-center" data-id="2wdj32yqu" data-path="src/components/FlipCard.tsx">
+            <ul className="text-sm space-y-2 " data-id="2wdj32yqu" data-path="src/components/FlipCard.tsx">
               {backContent.items.map((item, index) =>
               <li key={index} className="text-blue-100" data-id="oxyzcpz1p" data-path="src/components/FlipCard.tsx">
                   {item}

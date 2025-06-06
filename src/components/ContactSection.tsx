@@ -360,7 +360,7 @@ const ContactSection = () => {
 
               <CheckCircle className="w-8 h-8 text-green-600" data-id="cjbnrbk3j" data-path="src/components/ContactSection.tsx" />
             </motion.div>
-            <DialogTitle className="text-2xl font-bold text-gray-900" data-id="jqiek6ipf" data-path="src/components/ContactSection.tsx">
+            <DialogTitle className="text-2xl font-bold text-gray-900 text-center" data-id="jqiek6ipf" data-path="src/components/ContactSection.tsx">
               Thank You!
             </DialogTitle>
             <DialogDescription className="text-gray-600 mt-2" data-id="bajeycjil" data-path="src/components/ContactSection.tsx">

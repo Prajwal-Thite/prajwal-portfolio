@@ -101,7 +101,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
         initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
         animate={isInView ? { x: 0, opacity: 1 } : { x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
         transition={{ duration: 0.6, delay: index * 0.2 + 0.2 }}
-        className={`ml-16 w-full max-w-2xl ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'}`} data-id="03u7lwk82" data-path="src/components/ExperienceSection.tsx">
+        className={`ml-32 w-full max-w-2xl mr-auto`} data-id="03u7lwk82" data-path="src/components/ExperienceSection.tsx">
 
         <Card className="border border-gray-200 hover:shadow-lg transition-all duration-300 bg-white" data-id="l9ahdaphq" data-path="src/components/ExperienceSection.tsx">
           <CardContent className="p-6" data-id="ls5gmkmqw" data-path="src/components/ExperienceSection.tsx">

@@ -12,9 +12,9 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-white" data-id="3imvs030g" data-path="src/pages/HomePage.tsx">
             <header className="py-6 px-8 border-b bg-white/30 backdrop-blur-md shadow-sm text-gray-800 hover:text-indigo-600" data-id="8wqum0bc8" data-path="src/pages/HomePage.tsx"> {/*shadow-md sticky top-0 z-50*/}
-                <div className="container mx-auto flex justify-center  items-center" data-id="ysrlyv3p8" data-path="src/pages/HomePage.tsx">
+                <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 px-4 text-center" data-id="ysrlyv3p8" data-path="src/pages/HomePage.tsx">
                     {/* <h1 className="text-xl font-bold" data-id="8wc91ksah" data-path="src/pages/HomePage.tsx">Portfolio & Projects</h1> */}
-                    <nav className="space-x-4" data-id="fgrodh382" data-path="src/pages/HomePage.tsx">
+                    <nav className="flex flex-wrap justify-center gap-2 md:gap-4" data-id="fgrodh382" data-path="src/pages/HomePage.tsx">
                         <Button variant="link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} data-id="uuw0xcta8" data-path="src/pages/HomePage.tsx">Home</Button>
                         <Button variant="link" onClick={() => document.getElementById('aboutme')?.scrollIntoView({ behavior: 'smooth' })} data-id="vxhii53ln" data-path="src/pages/HomePage.tsx">About Me</Button>
                         <Button variant="link" onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })} data-id="vxhii53ln" data-path="src/pages/HomePage.tsx">Skills</Button>

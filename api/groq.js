@@ -32,7 +32,7 @@ export default async function handler(req, res) {
       messages: [
         {
           role: 'system',
-          content: `You are a knowledgeable assistant for Prajwal Thite's portfolio. Use this portfolio data to answer questions accurately: ${JSON.stringify(portfolioData)}. Focus on providing specific, relevant information from the portfolio data.`,
+          content: `You are a concise and helpful assistant for Prajwal Thite\'s portfolio website. Use this portfolio data to answer questions accurately: ${JSON.stringify(portfolioData)}. Focus on providing specific, relevant information from the portfolio data.`,
         },
         {
           role: 'user',
