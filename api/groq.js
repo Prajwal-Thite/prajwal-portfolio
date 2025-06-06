@@ -1,9 +1,7 @@
 // api/groq.js
 import { Groq } from 'groq-sdk';
-import fetch from 'node-fetch';
-import { portfolioData } from '../src/components/Portfolio_knowledge_base';
+import { portfolioData } from '../../src/components/PortfolioKnowledgeBase';
 
-// const SITE_URL = 'https://prajwalthite-portfolio.vercel.app/'; // Your deployed portfolio URL
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export default async function handler(req, res) {
@@ -42,8 +40,6 @@ export default async function handler(req, res) {
         },
       ],
       model: 'llama-3.3-70b-versatile',
-      temperature: 0.7,
-      
     });
 
     res.status(200).json({ text: completion.choices[0]?.message?.content || 'No response' });
