@@ -21,7 +21,7 @@ import {
   SiHtml5,
   SiCss3,
   SiPython,
-  SiD3Dotjs
+  SiD3Dotjs,
   SiPhp,
   SiLaravel,
   SiNodedotjs,
