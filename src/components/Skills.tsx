@@ -236,7 +236,7 @@ const Skills = () => {
                   transition={{ delay: .5, duration: 0.2 }}
                   className="text-3xl font-bold text-blue-500 mb-2" data-id="91qwgobpt" data-path="src/components/Skills.tsx">
 
-                  {skillsData.reduce((acc, category) => acc + category.skills.length, 0) - 12}+ {/*change this when needed*/}
+                  {skillsData.reduce((acc, category) => acc + category.skills.length, 0) - 13}+ {/*change this when needed*/}
                 </motion.div>
                 <p className="text-gray-600 dark:text-gray-300" data-id="vr81cn143" data-path="src/components/Skills.tsx">Technologies</p>
               </div>
@@ -250,7 +250,7 @@ const Skills = () => {
 
                   {skillsData.reduce((acc, category) =>
                   acc + category.skills.reduce((skillAcc, skill) => skillAcc + (skill.projects || 0), 0), 0
-                  )-60}+
+                  )-61}+
                 </motion.div>
                 <p className="text-gray-600 dark:text-gray-300" data-id="jtlv26gom" data-path="src/components/Skills.tsx">Projects</p>
               </div>           
