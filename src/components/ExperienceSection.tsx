@@ -196,6 +196,25 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
 
 };
 
+const handleDownloadCV = () => {    
+
+  // sharing link to download link
+  const fileId = '1AAIbkJYCORO_2j0XHRIzWojZYNZsC2uP';
+  const cvUrl = `https://drive.google.com/file/d/${fileId}/view`;
+  const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+  // Open PDF in new tab
+  window.open(cvUrl, '_blank');
+    
+  // Trigger download
+  const link = document.createElement('a');
+  link.href = downloadUrl;
+  link.download = 'Prajwal-Thite-Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 const ExperienceSection: React.FC = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -235,7 +254,7 @@ const ExperienceSection: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-16" data-id="oqy461pv3" data-path="src/components/ExperienceSection.tsx">
 
-          <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3" data-id="rwrj1y2vw" data-path="src/components/ExperienceSection.tsx">
+          <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3" onClick={handleDownloadCV} data-id="rwrj1y2vw" data-path="src/components/ExperienceSection.tsx">
             Download Full Resume
           </Button>
         </motion.div>

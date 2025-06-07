@@ -65,7 +65,7 @@ const EducationSection = () => {
     issueDate: "Mar 2025",
     credentialId: "5961451",
     verified: true,
-    link: "https://www.salesforce.com/trailblazer/profile"
+    link: "https://www.salesforce.com/trailblazer/xmczz5a47sxgtxcci0"
   },
   {
     id: "2",
@@ -76,7 +76,7 @@ const EducationSection = () => {
     issueDate: "April 2025",
     credentialId: "6122252",
     verified: true,
-    link: "https://www.salesforce.com/trailblazer/profile"
+    link: "https://www.salesforce.com/trailblazer/xmczz5a47sxgtxcci0"
   },
   {
     id: "3",

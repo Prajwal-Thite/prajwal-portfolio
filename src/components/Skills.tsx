@@ -21,6 +21,7 @@ import {
   SiHtml5,
   SiCss3,
   SiPython,
+  SiD3Dotjs
   SiPhp,
   SiLaravel,
   SiNodedotjs,
@@ -115,10 +116,11 @@ const Skills = () => {
     skills: [
     { name: "React.js", icon: SiReact, color: "#61DAFB", projects: 4, description: "Built dynamic UIs for research and production apps" },
     { name: "Express.js", icon: SiExpress, color: "#002233", projects: 1, description: "Developed backend APIs and middleware for Node.js services" },
-    { name: "SiLaravel", icon: SiLaravel, color: "#f6361c", projects: 1, description: "Created backend features and APIs for full-stack apps" },
+    { name: "Laravel", icon: SiLaravel, color: "#f6361c", projects: 1, description: "Created backend features and APIs for full-stack apps" },
     { name: "Redux", icon: () => <img src="/icons/redux.svg" alt="redux" className="w-8 h-8" />, projects: 0, description: "Handled global state in React apps for predictable data flow" },
     { name: "Node.js", icon: SiNodedotjs, color: "#83bf26", projects: 1, description: "Backend development, server logic, and integration with databases" },
     { name: "Tailwind CSS", icon: SiTailwindcss, color: "#61DAFB", projects: 3, description: "Rapid UI development and custom design systems" }, 
+    { name: "D3", icon: SiD3Dotjs, color: "#61DAFB", projects: 1, description: "Dynamic, data-driven visualizations for complex datasets" }
   ]
 
   },

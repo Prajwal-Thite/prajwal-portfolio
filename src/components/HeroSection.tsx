@@ -15,10 +15,23 @@ const HeroSection = () => {
 
   const mouseParallax = useMouseParallax(0.02);
 
-  const handleDownloadCV = () => {
-    // For now, we'll just show a toast. In a real app, this would download the actual CV
-    console.log('Downloading CV...');
-    // You can replace this with actual CV download logic
+  const handleDownloadCV = () => {    
+
+    // sharing link to download link
+    const fileId = '1AAIbkJYCORO_2j0XHRIzWojZYNZsC2uP';
+    const cvUrl = `https://drive.google.com/file/d/${fileId}/view`;
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+    // Open PDF in new tab
+    window.open(cvUrl, '_blank');
+    
+    // Trigger download
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'Prajwal-Thite-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
