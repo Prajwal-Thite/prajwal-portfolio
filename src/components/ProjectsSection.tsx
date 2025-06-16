@@ -162,20 +162,20 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50" data-id="ojgbgdqt3" data-path="src/components/ProjectsSection.tsx">
-      <div className="container mx-auto px-4" data-id="l9scl1e89" data-path="src/components/ProjectsSection.tsx">
+    <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16" data-id="anklyue0y" data-path="src/components/ProjectsSection.tsx">
+          className="text-center mb-16">
 
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6" data-id="d3x7u78li" data-path="src/components/ProjectsSection.tsx">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" data-id="xmnph174r" data-path="src/components/ProjectsSection.tsx">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Showcasing innovative solutions across AI, web development, and mobile applications. 
             Each project represents a unique challenge solved with cutting-edge technology.
           </p>
@@ -187,35 +187,35 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-12" data-id="ma2t96m3i" data-path="src/components/ProjectsSection.tsx">
+          className="mb-12">
 
-          <Tabs defaultValue="All" className="w-full" data-id="7wl71rdgf" data-path="src/components/ProjectsSection.tsx">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 bg-white/80 backdrop-blur-sm border border-gray-200 shadow-lg" data-id="8hbp80j4j" data-path="src/components/ProjectsSection.tsx">
+          <Tabs defaultValue="All" className="w-full">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 bg-white/80 backdrop-blur-sm border border-gray-200 shadow-lg">
               <TabsTrigger
                 value="All"
                 onClick={() => setSelectedCategory('All')}
-                className="data-[state=active]:bg-blue-500 data-[state=active]:text-white" data-id="hmxylxpmu" data-path="src/components/ProjectsSection.tsx">
+                className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">
 
                 All
               </TabsTrigger>
               <TabsTrigger
                 value="AI"
                 onClick={() => setSelectedCategory('AI')}
-                className="data-[state=active]:bg-purple-500 data-[state=active]:text-white" data-id="cet1qaagp" data-path="src/components/ProjectsSection.tsx">
+                className="data-[state=active]:bg-purple-500 data-[state=active]:text-white">
 
                 AI/ML
               </TabsTrigger>
               <TabsTrigger
                 value="Web"
                 onClick={() => setSelectedCategory('Web')}
-                className="data-[state=active]:bg-green-500 data-[state=active]:text-white" data-id="624w2e6ql" data-path="src/components/ProjectsSection.tsx">
+                className="data-[state=active]:bg-green-500 data-[state=active]:text-white">
 
                 Web
               </TabsTrigger>
               <TabsTrigger
                 value="Mobile"
                 onClick={() => setSelectedCategory('Mobile')}
-                className="data-[state=active]:bg-orange-500 data-[state=active]:text-white" data-id="4lakohg1q" data-path="src/components/ProjectsSection.tsx">
+                className="data-[state=active]:bg-orange-500 data-[state=active]:text-white">
 
                 Mobile
               </TabsTrigger>
@@ -227,13 +227,13 @@ const ProjectsSection = () => {
         {/* <motion.div
 
           viewport={{ once: true }}
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" data-id="lx3vz2ugs" data-path="src/components/ProjectsSection.tsx">
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
           {filteredProjects.map((project, index) =>
           <ProjectCard
             key={project.id}
             project={project}
-            index={index} data-id="88xyr2tof" data-path="src/components/ProjectsSection.tsx" />
+            index={index}/>
             
           )}
         </motion.div> */}
@@ -260,16 +260,16 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16" data-id="jltey1oz5" data-path="src/components/ProjectsSection.tsx">
+          className="text-center mt-16">
 
-          <p className="text-lg text-gray-600 mb-6" data-id="z9s0q9qu9" data-path="src/components/ProjectsSection.tsx">
+          <p className="text-lg text-gray-600 mb-6">
             Interested in collaborating or learning more about my work?
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => window.open('https://github.com/Prajwal-Thite?tab=repositories', '_blank')} 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300" data-id="wazba042o" data-path="src/components/ProjectsSection.tsx">             
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300">             
             View All Projects on GitHub
           </motion.button>
         </motion.div>

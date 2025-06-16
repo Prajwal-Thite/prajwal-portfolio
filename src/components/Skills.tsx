@@ -147,18 +147,18 @@ const Skills = () => {
 
 
   return (
-    <section id="skills" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800" data-id="ooi2777t6" data-path="src/components/Skills.tsx">
-      <div className="max-w-7xl mx-auto" data-id="4zasj6nah" data-path="src/components/Skills.tsx">
+    <section id="skills" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16" data-id="156f3fg0z" data-path="src/components/Skills.tsx">
+          className="text-center mb-16">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6" data-id="dxxuygpzr" data-path="src/components/Skills.tsx">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
             My Skills & Expertise
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed" data-id="p3c2ef43s" data-path="src/components/Skills.tsx">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             A comprehensive overview of my technical skills, tools, and certifications 
             that enable me to deliver exceptional digital solutions.
           </p>
@@ -169,7 +169,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-4 mb-12" data-id="j5wzjfmna" data-path="src/components/Skills.tsx">
+          className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) =>
           <Button
             key={category}
@@ -179,37 +179,37 @@ const Skills = () => {
             activeFilter === category ?
             "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg" :
             "bg-white/20 backdrop-blur-sm hover:bg-white/30 text-gray-700 dark:text-gray-300"}`
-            } data-id="98la9604i" data-path="src/components/Skills.tsx">
+            }>
 
-              <Filter className="w-4 h-4 mr-2" data-id="jxeghzjan" data-path="src/components/Skills.tsx" />
+              <Filter className="w-4 h-4 mr-2"/>
               {category}
             </Button>
           )}
         </motion.div>
 
         {/* Skills Grid */}
-        <AnimatePresence mode="wait" data-id="l24vuwr59" data-path="src/components/Skills.tsx">
+        <AnimatePresence mode="wait">
           <motion.div
             key={activeFilter}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-id="nt5ya4kwf" data-path="src/components/Skills.tsx">
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {filteredSkills.map((category, index) =>
             <motion.div
               key={`${activeFilter}-${category.title}`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.6 }} data-id="ka4ayyxzc" data-path="src/components/Skills.tsx">
+              transition={{ delay: index * 0.1, duration: 0.6 }}>
 
                 <SkillCard
                 title={category.title}
                 icon={category.icon}
                 skills={category.skills}
                 color={category.color}
-                category={category.category} data-id="2yetkvbsy" data-path="src/components/Skills.tsx" />
+                category={category.category}/>
 
               </motion.div>
             )}
@@ -221,55 +221,55 @@ const Skills = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.2 }}
-          className="text-center mt-16" data-id="9tgsmf554" data-path="src/components/Skills.tsx">
+          className="text-center mt-16">
 
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 max-w-6xl mx-auto" data-id="fxazfxyue" data-path="src/components/Skills.tsx">
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8" data-id="hmqj9qth1" data-path="src/components/Skills.tsx">
+          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 max-w-6xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8">
               Skills Overview
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8" data-id="766puiiwn" data-path="src/components/Skills.tsx">
-              <div className="text-center" data-id="z11kg1psq" data-path="src/components/Skills.tsx">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+              <div className="text-center">
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: .5, duration: 0.2 }}
-                  className="text-3xl font-bold text-blue-500 mb-2" data-id="91qwgobpt" data-path="src/components/Skills.tsx">
+                  className="text-3xl font-bold text-blue-500 mb-2">
 
                   {skillsData.reduce((acc, category) => acc + category.skills.length, 0) - 13}+ {/*change this when needed*/}
                 </motion.div>
-                <p className="text-gray-600 dark:text-gray-300" data-id="vr81cn143" data-path="src/components/Skills.tsx">Technologies</p>
+                <p className="text-gray-600 dark:text-gray-300">Technologies</p>
               </div>
               
-              <div className="text-center" data-id="v1or1xchq" data-path="src/components/Skills.tsx">
+              <div className="text-center">
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.6, duration: 0.2 }}
-                  className="text-3xl font-bold text-green-500 mb-2" data-id="mzfplzxz0" data-path="src/components/Skills.tsx">
+                  className="text-3xl font-bold text-green-500 mb-2">
 
-                  {skillsData.reduce((acc, category) =>
+                  {skillsData.reduce((acc, category) => 
                   acc + category.skills.reduce((skillAcc, skill) => skillAcc + (skill.projects || 0), 0), 0
                   )-61}+
                 </motion.div>
-                <p className="text-gray-600 dark:text-gray-300" data-id="jtlv26gom" data-path="src/components/Skills.tsx">Projects</p>
+                <p className="text-gray-600 dark:text-gray-300">Projects</p>
               </div>           
 
               
-              <div className="text-center" data-id="2ptnsiydr" data-path="src/components/Skills.tsx">
+              <div className="text-center">
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.8, duration: 0.2 }}
-                  className="text-3xl font-bold text-orange-500 mb-2" data-id="ix8mws8oj" data-path="src/components/Skills.tsx">
+                  className="text-3xl font-bold text-orange-500 mb-2">
 
                   1+
                 </motion.div>
-                <p className="text-gray-600 dark:text-gray-300" data-id="x09w18p62" data-path="src/components/Skills.tsx">Years Experience</p>
+                <p className="text-gray-600 dark:text-gray-300">Years Experience</p>
               </div>
             </div>
             
-            <p className="text-gray-600 dark:text-gray-300 text-lg" data-id="s7ndj5nyw" data-path="src/components/Skills.tsx">
+            <p className="text-gray-600 dark:text-gray-300 text-lg">
               Technology evolves rapidly, and so do I. I'm constantly learning new tools, 
               frameworks, and best practices to stay at the forefront of web development 
               and deliver cutting-edge solutions.

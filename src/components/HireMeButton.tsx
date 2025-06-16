@@ -24,12 +24,12 @@ const HireMeButton = ({ onClick }: HireMeButtonProps) => {
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }} data-id="1q9opy7e5" data-path="src/components/HireMeButton.tsx">
+      whileTap={{ scale: 0.95 }}>
 
       <Button
         onClick={handleClick}
         className="relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-        size="lg" data-id="0ezomo817" data-path="src/components/HireMeButton.tsx">
+        size="lg">
 
         Contact Me
       </Button>
@@ -48,7 +48,7 @@ const HireMeButton = ({ onClick }: HireMeButtonProps) => {
         transition={{
           duration: 0.6,
           ease: "easeOut"
-        }} data-id="daqd8mart" data-path="src/components/HireMeButton.tsx" />
+        }}/>
 
     </motion.div>);
 

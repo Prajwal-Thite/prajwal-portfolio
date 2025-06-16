@@ -1,6 +1,5 @@
-# Welcome to your EzSite project
-
-A clean, modern React template with TypeScript, Vite, TailwindCSS, and ShadCN UI components. This template provides a solid foundation for building web applications with best practices in mind.
+## Welcome to my Portfolio
+A clean, modern React app with TypeScript, Vite, TailwindCSS, ShadCN UI components and AI Chatbot for assistance. 
 
 ## Tech Features
 
@@ -13,6 +12,7 @@ A clean, modern React template with TypeScript, Vite, TailwindCSS, and ShadCN UI
 - 🧭 **React Router** - Easy client-side routing
 - 🔄 **React Query** - Data fetching and state management
 - 🧪 **Form Handling** - React Hook Form with Zod validation
+- 🤖 **AI Chatbot** - Interactive LLM-powered chat assistant
 
 ## Getting Started
 
@@ -25,8 +25,8 @@ A clean, modern React template with TypeScript, Vite, TailwindCSS, and ShadCN UI
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/your-username/react-template-project.git
-cd react-template-project
+git clone https://github.com/your-username/prajwal-portfolio.git
+cd portfolio
 ```
 
 2. Install dependencies:
@@ -52,7 +52,7 @@ pnpm dev
 ## Project Structure
 
 ```
-react-template-project/
+portfolio/
 ├── public/              # Static assets
 │   ├── components/      # Reusable components
 │   │   └── ui/          # UI components from ShadCN
@@ -68,13 +68,6 @@ react-template-project/
 ├── tsconfig.json        # TypeScript configuration
 └── vite.config.ts       # Vite configuration
 ```
-
-## Customization
-
-- **Styling**: Modify `tailwind.config.ts` to customize your design tokens
-- **Components**: Add or modify components in the `src/components` directory
-- **Pages**: Create new pages in the `src/pages` directory
-- **Routing**: Update routes in `src/App.tsx`
 
 ## Building for Production
 

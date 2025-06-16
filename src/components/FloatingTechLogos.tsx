@@ -29,7 +29,7 @@ const FloatingTechLogos = () => {
   const mouseParallax = useMouseParallax(0.05);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none" data-id="jr4edqmc1" data-path="src/components/FloatingTechLogos.tsx">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {techLogos.map((logo, index) =>
       <motion.div
         key={logo.name}
@@ -49,11 +49,11 @@ const FloatingTechLogos = () => {
           repeat: Infinity,
           ease: "easeInOut",
           delay: index * 0.5
-        }} data-id="3cvqjzkvo" data-path="src/components/FloatingTechLogos.tsx">
+        }}>
 
           <motion.div
           whileHover={{ scale: 1.2, opacity: 0.4 }}
-          className="cursor-pointer" data-id="lx0iq3ofj" data-path="src/components/FloatingTechLogos.tsx">
+          className="cursor-pointer">
 
             {logo.icon}
           </motion.div>

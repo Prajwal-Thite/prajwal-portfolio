@@ -38,7 +38,7 @@ const EducationSection = () => {
     institution: "University Of Konstanz",
     location: "Konstanz, Germany",
     period: "2022 - 2025",
-    gpa: "2.6/4.0",
+    gpa: "2.5/4.0",
     honors: ["NLP", "Data Science & Visualization", "Database Architecture", "Algorithm Engineering"],
     // description: "Specialized in Machine Learning and Artificial Intelligence with focus on Deep Learning architectures and Natural Language Processing."
   },
@@ -159,27 +159,27 @@ const EducationSection = () => {
   };
 
   return (
-    <section id="education" className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50" data-id="v4dsavjps" data-path="src/components/EducationSection.tsx">
-      <div className="container mx-auto px-4" data-id="ut6tjki6u" data-path="src/components/EducationSection.tsx">
+    <section id="education" className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12" data-id="ujvqwi2zm" data-path="src/components/EducationSection.tsx">
+          className="text-center mb-12">
 
-          <div className="flex items-center justify-center gap-3 mb-4" data-id="vybjtz8j6" data-path="src/components/EducationSection.tsx">
+          <div className="flex items-center justify-center gap-3 mb-4">
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }} data-id="nzmi3jofi" data-path="src/components/EducationSection.tsx">
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}>
 
-              <GraduationCap className="h-8 w-8 text-blue-600" data-id="i3lvqf826" data-path="src/components/EducationSection.tsx" />
+              <GraduationCap className="h-8 w-8 text-blue-600"/>
             </motion.div>
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent" data-id="9q3xk9lov" data-path="src/components/EducationSection.tsx">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Education &amp; Certifications
             </h2>
           </div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto" data-id="3y0cy783x" data-path="src/components/EducationSection.tsx">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Academic excellence and professional certifications that drive innovation and expertise
           </p>
         </motion.div>
@@ -190,68 +190,68 @@ const EducationSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-16" data-id="oe0jerprk" data-path="src/components/EducationSection.tsx">
+          className="mb-16">
 
           <motion.h3
             variants={itemVariants}
-            className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2" data-id="jrdr3fz08" data-path="src/components/EducationSection.tsx">
+            className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
 
-            <GraduationCap className="h-6 w-6 text-blue-600" data-id="es5lx9tox" data-path="src/components/EducationSection.tsx" />
+            <GraduationCap className="h-6 w-6 text-blue-600"/>
             Education
           </motion.h3>
 
-          <div className="space-y-6" data-id="zy3uuqbpg" data-path="src/components/EducationSection.tsx">
+          <div className="space-y-6">
             {education.map((edu, index) =>
             <motion.div
               key={edu.id}
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }} data-id="prbgwwrdl" data-path="src/components/EducationSection.tsx">
+              transition={{ duration: 0.2 }}>
 
-                <Card className="overflow-hidden border-l-4 border-l-blue-500 hover:shadow-lg transition-all duration-300" data-id="yw26r9w7h" data-path="src/components/EducationSection.tsx">
-                  <CardContent className="p-6" data-id="acimivnke" data-path="src/components/EducationSection.tsx">
-                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4" data-id="071h131yp" data-path="src/components/EducationSection.tsx">
-                      <div className="flex-1" data-id="tdee5eoji" data-path="src/components/EducationSection.tsx">
-                        <div className="flex items-start gap-3 mb-3" data-id="7pa7hsdak" data-path="src/components/EducationSection.tsx">
-                          <div className="mt-1" data-id="7bv69ioso" data-path="src/components/EducationSection.tsx">
-                            <GraduationCap className="h-5 w-5 text-blue-600" data-id="4609w7xrr" data-path="src/components/EducationSection.tsx" />
+                <Card className="overflow-hidden border-l-4 border-l-blue-500 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="flex items-start gap-3 mb-3">
+                          <div className="mt-1">
+                            <GraduationCap className="h-5 w-5 text-blue-600"/>
                           </div>
-                          <div data-id="9nl1cxi52" data-path="src/components/EducationSection.tsx">
-                            <h4 className="text-xl font-semibold text-gray-900" data-id="u5dl1eghx" data-path="src/components/EducationSection.tsx">
+                          <div>
+                            <h4 className="text-xl font-semibold text-gray-900">
                               {edu.degree} in {edu.field}
                             </h4>
-                            <p className="text-lg text-blue-600 font-medium" data-id="a2vmzw5s5" data-path="src/components/EducationSection.tsx">{edu.institution}</p>
+                            <p className="text-lg text-blue-600 font-medium">{edu.institution}</p>
                           </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-3" data-id="sr65t8oyl" data-path="src/components/EducationSection.tsx">
-                          <div className="flex items-center gap-1" data-id="y3yefkbob" data-path="src/components/EducationSection.tsx">
-                            <MapPin className="h-4 w-4" data-id="1vu475tn5" data-path="src/components/EducationSection.tsx" />
-                            <span data-id="178necv0z" data-path="src/components/EducationSection.tsx">{edu.location}</span>
+                        <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-3">
+                          <div className="flex items-center gap-1">
+                            <MapPin className="h-4 w-4"/>
+                            <span>{edu.location}</span>
                           </div>
-                          <div className="flex items-center gap-1" data-id="vxg9d70i6" data-path="src/components/EducationSection.tsx">
-                            <Calendar className="h-4 w-4" data-id="ndfc73fim" data-path="src/components/EducationSection.tsx" />
-                            <span data-id="9ko5ez8od" data-path="src/components/EducationSection.tsx">{edu.period}</span>
+                          <div className="flex items-center gap-1">
+                            <Calendar className="h-4 w-4" />
+                            <span >{edu.period}</span>
                           </div>
                           {edu.gpa &&
-                        <div className="flex items-center gap-1" data-id="z4bybxsiw" data-path="src/components/EducationSection.tsx">
-                              <Award className="h-4 w-4" data-id="t44odcku9" data-path="src/components/EducationSection.tsx" />
-                              <span data-id="skjs237tz" data-path="src/components/EducationSection.tsx">GPA: {edu.gpa}</span>
+                        <div className="flex items-center gap-1">
+                              <Award className="h-4 w-4"/>
+                              <span>GPA: {edu.gpa}</span>
                             </div>
                         }
                         </div>
 
-                        {/* <p className="text-gray-700 mb-3" data-id="apfrgmdmg" data-path="src/components/EducationSection.tsx">{edu.description}</p> */}
+                        {/* <p className="text-gray-700 mb-3">{edu.description}</p> */}
 
                         {edu.honors && edu.honors.length > 0 &&
-                      <div className="flex flex-wrap gap-2" data-id="2ijh2b669" data-path="src/components/EducationSection.tsx">
+                      <div className="flex flex-wrap gap-2">
                             {edu.honors.map((honor, idx) =>
                         <motion.span
                           key={idx}
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: idx * 0.1 }}
-                          className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full" data-id="i79tlpwyg" data-path="src/components/EducationSection.tsx">
+                          className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
 
                                 {honor}
                               </motion.span>
@@ -272,19 +272,19 @@ const EducationSection = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} data-id="fn2c8x910" data-path="src/components/EducationSection.tsx">
+          viewport={{ once: true }}>
 
           <motion.h3
             variants={itemVariants}
-            className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2" data-id="a5og94sqg" data-path="src/components/EducationSection.tsx">
+            className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
 
-            <Award className="h-6 w-6 text-indigo-600" data-id="558f5x624" data-path="src/components/EducationSection.tsx" />
+            <Award className="h-6 w-6 text-indigo-600"/>
             Professional Certifications
           </motion.h3>
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" data-id="nbu8dhwu6" data-path="src/components/EducationSection.tsx">
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
             {certifications.map((cert, index) =>
             <motion.div
@@ -295,24 +295,24 @@ const EducationSection = () => {
                 y: 0,
                 transition: { delay: index * 0.1 }
               }}
-              viewport={{ once: true }} data-id="l7lr77z60" data-path="src/components/EducationSection.tsx">
+              viewport={{ once: true }}>
 
-                <CertificationBadge {...cert} data-id="3ephzzuoi" data-path="src/components/EducationSection.tsx" />
+                <CertificationBadge {...cert}/>
               </motion.div>
             )}
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="mt-12 text-center" data-id="g6k452ulj" data-path="src/components/EducationSection.tsx">
+            className="mt-12 text-center">
 
             <Button
               variant="outline"
               size="lg"
               onClick={() => window.open("https://www.linkedin.com/in/prajwal-thite/details/certifications/")}
-              className="group border-2 border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50 transition-all duration-300" data-id="onl25tki1" data-path="src/components/EducationSection.tsx">
+              className="group border-2 border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50 transition-all duration-300">
 
-              <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-200" data-id="p5g0efbxs" data-path="src/components/EducationSection.tsx" />
+              <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-200"/>
               View All Credentials
             </Button>
           </motion.div>

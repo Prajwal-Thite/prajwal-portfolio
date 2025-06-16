@@ -40,20 +40,20 @@ const SkillCard = ({ title, icon: Icon, skills, color, category }: SkillCardProp
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -5 }}
-      className="h-full" data-id="361o68hb1" data-path="src/components/SkillCard.tsx">
+      className="h-full">
 
-      <Card className="h-full border-0 shadow-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300" data-id="qlqt37u0n" data-path="src/components/SkillCard.tsx">
-        <CardHeader className="text-center pb-4" data-id="pxy0e0766" data-path="src/components/SkillCard.tsx">
-          <div className={`w-16 h-16 mx-auto rounded-full ${color} flex items-center justify-center mb-4`} data-id="pk62koowq" data-path="src/components/SkillCard.tsx">
-            <Icon className="w-8 h-8 text-white" data-id="klumib5bc" data-path="src/components/SkillCard.tsx" />
+      <Card className="h-full border-0 shadow-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
+        <CardHeader className="text-center pb-4">
+          <div className={`w-16 h-16 mx-auto rounded-full ${color} flex items-center justify-center mb-4`}>
+            <Icon className="w-8 h-8 text-white"/>
           </div>
-          <CardTitle className="text-xl font-bold text-gray-800 dark:text-white" data-id="bkha9sx1l" data-path="src/components/SkillCard.tsx">
+          <CardTitle className="text-xl font-bold text-gray-800 dark:text-white">
             {title}
           </CardTitle>
         </CardHeader>
-        <CardContent data-id="fclvwck8h" data-path="src/components/SkillCard.tsx">
+        <CardContent>
           
-          <div className="grid grid-cols-2 gap-4 mb-6" data-id="n5hhjj1or" data-path="src/components/SkillCard.tsx">
+          <div className="grid grid-cols-2 gap-4 mb-6">
             {skills.slice(0, 4).map((skill) => {
               const SkillIcon = skill.icon;
               return (
@@ -68,17 +68,17 @@ const SkillCard = ({ title, icon: Icon, skills, color, category }: SkillCardProp
           </div>
             
             {skills.length > 4 &&
-            <div className="flex flex-wrap gap-2 justify-center" data-id="sm9l00mtk" data-path="src/components/SkillCard.tsx">
+            <div className="flex flex-wrap gap-2 justify-center">
                 {skills.slice(4).map((skill, index) =>          
             
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: (index + 4) * 0.1, duration: 0.3 }}
-                    className="cursor-pointer" data-id="2qdh8s3kl" data-path="src/components/SkillCard.tsx">
+                    className="cursor-pointer">
                     <Badge
                       variant="secondary"
-                      className="bg-white/80 text-gray-700 hover:bg-white/90 transition-colors" data-id="74d7aobil" data-path="src/components/SkillCard.tsx">
+                      className="bg-white/80 text-gray-700 hover:bg-white/90 transition-colors">
                       {skill.name}
                     </Badge>
                   </motion.div>            

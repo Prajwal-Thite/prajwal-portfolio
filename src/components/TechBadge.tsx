@@ -62,11 +62,11 @@ const TechBadge = ({ tech, size = 'md' }: TechBadgeProps) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      transition={{ duration: 0.2 }} data-id="5jgqu97t9" data-path="src/components/TechBadge.tsx">
+      transition={{ duration: 0.2 }}>
 
       <Badge
         variant="outline"
-        className={`${getTechColor(tech)} ${sizeClasses} font-medium border hover:shadow-sm transition-shadow duration-200`} data-id="0z2o1x0ph" data-path="src/components/TechBadge.tsx">
+        className={`${getTechColor(tech)} ${sizeClasses} font-medium border hover:shadow-sm transition-shadow duration-200`}>
 
         {tech}
       </Badge>

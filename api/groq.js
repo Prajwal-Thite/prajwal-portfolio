@@ -12,22 +12,6 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
 
   try {
-    // const siteRes = await fetch(SITE_URL);
-    // const html = await siteRes.text();
-    // const content = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 3000);
-
-    // const completion = await groq.chat.completions.create({
-    //   messages: [
-    //     {
-    //       role: 'system',
-    //       content: `You are a concise and helpful assistant for Prajwal Thite's portfolio website. Answer questions clearly in 2–3 sentences max. Focus only on the user's question, and avoid repeating the question or adding unnecessary detail. Here is the scraped content: ${content}`,
-    //     },
-    //     {
-    //       role: 'user',
-    //       content: prompt,
-    //     },
-    //   ],
-    //   model: 'llama-3.3-70b-versatile',
     const completion = await groq.chat.completions.create({
       messages: [
         {

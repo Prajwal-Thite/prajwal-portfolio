@@ -34,12 +34,12 @@ const CircularProgress = ({
   const strokeDashoffset = circumference - animatedPercentage / 100 * circumference;
 
   return (
-    <div className="flex flex-col items-center" data-id="e6aprsi02" data-path="src/components/CircularProgress.tsx">
-      <div className="relative" data-id="eogi0kj69" data-path="src/components/CircularProgress.tsx">
+    <div className="flex flex-col items-center">
+      <div className="relative">
         <svg
           width={size}
           height={size}
-          className="transform -rotate-90" data-id="xax9od66c" data-path="src/components/CircularProgress.tsx">
+          className="transform -rotate-90">
 
           {/* Background circle */}
           <circle
@@ -49,7 +49,7 @@ const CircularProgress = ({
             stroke="currentColor"
             strokeWidth={strokeWidth}
             fill="none"
-            className="text-gray-200 dark:text-gray-700" data-id="nltffh9nj" data-path="src/components/CircularProgress.tsx" />
+            className="text-gray-200 dark:text-gray-700"/>
 
           
           {/* Progress circle */}
@@ -68,17 +68,17 @@ const CircularProgress = ({
               duration: 1.5,
               ease: "easeInOut",
               delay: delay / 1000
-            }} data-id="yuqr1hb41" data-path="src/components/CircularProgress.tsx" />
+            }}/>
 
         </svg>
         
         {/* Percentage text */}
-        <div className="absolute inset-0 flex items-center justify-center" data-id="s0zn6r94v" data-path="src/components/CircularProgress.tsx">
+        <div className="absolute inset-0 flex items-center justify-center">
           <motion.span
             className="text-sm font-bold text-gray-700 dark:text-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: delay / 1000 + 0.5 }} data-id="0mecdqurs" data-path="src/components/CircularProgress.tsx">
+            transition={{ delay: delay / 1000 + 0.5 }}>
 
             {animatedPercentage}%
           </motion.span>
@@ -90,7 +90,7 @@ const CircularProgress = ({
         className="text-xs text-gray-600 dark:text-gray-400 mt-2 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: delay / 1000 + 0.7 }} data-id="6rezsramw" data-path="src/components/CircularProgress.tsx">
+        transition={{ delay: delay / 1000 + 0.7 }}>
 
           {label}
         </motion.p>
