@@ -199,7 +199,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
 const handleDownloadCV = () => {    
 
   // sharing link to download link
-  const fileId = '1AAIbkJYCORO_2j0XHRIzWojZYNZsC2uP';
+  const fileId = '1kConc17LaqU6VI7ojVKGCStlCw33krHb';
   const cvUrl = `https://drive.google.com/file/d/${fileId}/view`;
   const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
