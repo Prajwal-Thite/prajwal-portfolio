@@ -97,7 +97,7 @@ const AboutMe = () => {
                 <div className="w-64 h-64 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
                   <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
                     <img
-                      src="https://media.licdn.com/dms/image/v2/D4D03AQGFVCpTOrNxWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723562469762?e=1754524800&v=beta&t=zDlIoRAOPOZJ7-yM-DhX7WVx0vMX5LgcrshTioWpz2Y"
+                      src="https://media.licdn.com/dms/image/v2/D4D03AQGFVCpTOrNxWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723562469845?e=1762992000&v=beta&t=_0NTkcuKH7oIcT023vQ4aKRNfXcoPK8Rvy2BuSyYp64"
                       alt="Professional Avatar"
                       className="w-56 h-56 rounded-full object-cover"/>
 
