@@ -79,10 +79,10 @@ const PortfolioChatBot = () => {
 
 
   const quickQuestions = [
-  "What projects have you worked on?",
-  "Can you share your experience in web development?",
-  "Which technologies are you most comfortable with?",
-  "How can I get in touch with you?",    
+  "What projects has Prajwal worked on?",
+  "What is Prajwal's backend experience?",
+  "What technologies does Prajwal specialise in?",
+  "How can I get in touch with Prajwal?",
   ];
 
 
