@@ -11,7 +11,7 @@ import Skills from "@/components/Skills";
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-white">
-            <header className="py-6 px-8 border-b bg-white/30 backdrop-blur-md shadow-sm text-gray-800 hover:text-indigo-600"> {/*shadow-md sticky top-0 z-50*/}
+            <header className="py-6 px-8 border-b bg-white/30 backdrop-blur-md shadow-sm text-gray-800 hover:text-indigo-600 sticky top-0 z-50">
                 <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 px-4 text-center">                    
                     <nav className="flex flex-wrap justify-center gap-2 md:gap-4">
                         <Button variant="link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Button>
@@ -44,7 +44,7 @@ const HomePage = () => {
 
             <footer className="border-t py-8 mt-auto">
                 <div className="container mx-auto px-4 text-center text-gray-500">
-                    <p>© {new Date().getFullYear()} Prajwal Thite | Full Stack Developer & AI Enthusiast. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Prajwal Thite | Full Stack Developer. All rights reserved.</p>
                 </div>
             </footer>
 

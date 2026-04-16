@@ -21,9 +21,7 @@ import {
   SiHtml5,
   SiCss3,
   SiPython,
-  SiD3Dotjs,
   SiPhp,
-  SiLaravel,
   SiNodedotjs,
   SiExpress,
   SiDocker,
@@ -35,7 +33,21 @@ import {
   SiKubernetes,
   SiOpenai,
   SiTensorflow,
-  SiGraphql,  
+  SiGraphql,
+  SiNextdotjs,
+  SiRedis,
+  SiJenkins,
+  SiGrafana,
+  SiBitbucket,
+  SiShopify,
+  SiSymfony,
+  SiAmazonsqs,
+  SiJira,
+  SiConfluence,
+  SiScrumalliance,
+  SiFigma,
+  SiLens,
+  SiDbeaver,
 } from "react-icons/si";
 
 import { FaBrain, FaBook, FaCogs } from "react-icons/fa";
@@ -51,12 +63,14 @@ const Skills = () => {
     category: "Frontend",
     skills: [
     { name: "React", icon: SiReact, color: "#61DAFB", projects: 5, description: "Expert in hooks, context, and performance optimization" },
-    { name: "TypeScript", icon:  SiTypescript, color: "#3178C6", projects: 4, description: "Strong typing and advanced type manipulation" },    
+    { name: "Shopify Liquid", icon: SiShopify, color: "#96bf48", projects: 2, description: "Shopify theme development and customization using Liquid templating" },    
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", projects: 3, description: "Rapid UI development and custom design systems" },
     { name: "JavaScript", icon: () => <img src="/icons/javascript.svg" alt="javascript" className="w-8 h-8" />, projects: 3, description: "ES6+, async programming, and DOM manipulation" },
-    { name: "Tailwind CSS", icon:  SiTailwindcss, color: "#61DAFB", projects: 3, description: "Rapid UI development and custom design systems" },    
-    { name: "HTML5", icon: SiHtml5, color: "#FFCA28", projects: 3, description: "Semantic markup and accessibility best practices" },
-    { name: "CSS3", icon: SiCss3, color: "#06B6D4", projects: 3, description: "Flexbox, Grid, animations, and responsive design" },
-    { name: "Redux", icon: () => <img src="/icons/redux.svg" alt="redux" className="w-6 h-6" /> , projects: 0, description: "Handled global state in React apps for predictable data flow" },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6", projects: 4, description: "Strong typing across React components and full-stack apps" },
+    { name: "Next.js", icon: SiNextdotjs, color: "#000000", projects: 2, description: "Server-side rendering and full-stack React framework" },    
+    { name: "HTML5", icon: SiHtml5, color: "#E34F26", projects: 3, description: "Semantic markup and accessibility best practices" },
+    { name: "CSS3", icon: SiCss3, color: "#1572B6", projects: 3, description: "Flexbox, Grid, animations, and responsive design" },
+    { name: "Redux", icon: () => <img src="/icons/redux.svg" alt="redux" className="w-6 h-6" />, projects: 0, description: "Handled global state in React apps for predictable data flow" },
   ]
 
   },
@@ -66,11 +80,13 @@ const Skills = () => {
     color: "bg-gradient-to-br from-green-500 to-green-600",
     category: "Backend",
     skills: [
-    { name: "PHP", icon: SiPhp, color: "#7b7fb5", projects: 1, description: "Backend development using Laravel and full-stack integrations" },
-    { name: "Python", icon: () => <img src="/icons/python.svg" alt="python" className="w-7 h-7" />, color: "#3776AB", projects: 2, description: "Django, Flask, and data processing" },
-    { name: "Laravel", icon: SiLaravel, color: "#f6361c", projects: 1, description: "Developed RESTful APIs, admin panels, and full-stack features using Laravel" },
-    { name: "Node.js", icon: SiNodedotjs, color: "#83bf26", projects: 1, description: "RESTful APIs and microservices architecture" },
+    { name: "Python", icon: () => <img src="/icons/python.svg" alt="python" className="w-7 h-7" />, color: "#3776AB", projects: 2, description: "Data processing, ML pipelines, and backend automation" },
+    { name: "Node.js", icon: SiNodedotjs, color: "#83bf26", projects: 1, description: "RESTful APIs, microservices, and backend service architecture" },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6", projects: 4, description: "Used with Bun for backend services and eligibility-based checkout logic" },
+    { name: "PHP", icon: SiPhp, color: "#7b7fb5", projects: 1, description: "Backend services and middleware for Shopify-based platforms" },
     { name: "Express.js", icon: SiExpress, color: "#002233", projects: 1, description: "Middleware, routing, and API development" },
+    { name: "Symfony", icon: SiSymfony, color: "#000000", projects: 1, description: "PHP framework for building structured backend applications" },
+    { name: "FrankenPHP", icon: SiPhp, color: "#7b7fb5", projects: 1, description: "Modern PHP application server for high-performance backend services" },
   ]
 
   },
@@ -86,41 +102,64 @@ const Skills = () => {
     { name: "TensorFlow", icon: SiTensorflow, color: "#fe8724", projects: 1, description: "Deep learning and neural network training" },
     // { name: "PyTorch", level: 75, projects: 2, description: "Research-oriented ML model development" },
     // { name: "Scikit-learn", level: 40, projects: 0, description: "Classical ML algorithms and data preprocessing" },
-    { name: "OpenAI API", icon: SiOpenai, color: "#fffff", projects: 1, description: "GPT integration and prompt engineering" },    
-    // { name: "NumPy", level: 83, projects: 5, description: "Numerical computing and array operations" },    
+    // { name: "NumPy", level: 83, projects: 5, description: "Numerical computing and array operations" },
     ]
 
   },
   {
-    title: "DevOps & Tools",
-    icon: Settings,
-    color: "bg-gradient-to-br from-orange-500 to-orange-600",
-    category: "Tools",
+    title: "APIs & Integrations",
+    icon: Layers,
+    color: "bg-gradient-to-br from-cyan-500 to-cyan-600",
+    category: ["Backend", "APIs"],
     skills: [
-    { name: "Salesforce", icon: () => <img src="/icons/salesforce.svg" alt="Salesforce" className="w-8 h-8" />, projects: 0, description: "Worked with Salesforce CRM platforms; certified as AI Associate and Administrator" },
-    { name: "Git", icon: SiGit, color: "#f32b3b", projects: 10, description: "Version control and collaborative workflows" },
-    { name: "Postman", icon: SiPostman, color: "#ff6c37", projects: 4, description: "Used for testing REST APIs, automating requests, and validating backend responses" },
-    { name: "Docker", icon: SiDocker, color: "#2396ee", projects: 1, description: "Containerization and multi-stage builds" },
-    // { name: "AWS", level: 82, projects: 5, description: "EC2, S3, Lambda, and cloud architecture" }, 
-    // { name: "GitHub Actions", level: 78, projects: 4, description: "CI/CD pipelines and automated testing" },
-    { name: "Kubernetes", icon: SiKubernetes, color: "#3a71e6", projects: 2, description: "Container orchestration and scaling" },
-    // { name: "Jenkins", level: 68, projects: 2, description: "Build automation and deployment pipelines" }
-  ]
-
+    { name: "REST APIs", icon: FaCogs, projects: 3, description: "Designed and consumed RESTful APIs for service communication and third-party integrations" },
+    { name: "GraphQL", icon: SiGraphql, color: "#e63bad", projects: 2, description: "Efficient data querying between backend services and frontend apps" },    
+    { name: "Shopify Storefront API", icon: SiShopify, color: "#96bf48", projects: 2, description: "Queried product, cart, and checkout data for custom Shopify storefronts" },
+    { name: "Shopify Admin API", icon: SiShopify, color: "#96bf48", projects: 2, description: "Managed products, metafields, shipping profiles, and orders via Shopify Admin API" },
+    { name: "Webhooks", icon: FaCogs, projects: 2, description: "Implemented event-driven Webhooks for real-time data sync between systems" }
+    ]
   },
   {
-    title: "Frameworks & Libraries",
+    title: "DevOps & Cloud",
+    icon: Settings,
+    color: "bg-gradient-to-br from-orange-500 to-orange-600",
+    category: ["Backend", "DevOps"],
+    skills: [
+    { name: "Salesforce", icon: () => <img src="/icons/salesforce.svg" alt="Salesforce" className="w-8 h-8" />, projects: 0, description: "Worked with Salesforce CRM platforms; certified as AI Associate and Administrator" },
+    { name: "AWS", icon: () => <img src="/icons/aws.svg" alt="AWS" className="w-8 h-8" />, projects: 1, description: "Production infrastructure with S3, EC2, SQS, and load balancing" },
+    { name: "Jenkins", icon: SiJenkins, color: "#D24939", projects: 1, description: "CI/CD pipelines and automated deployment builds" },    
+    { name: "Docker", icon: SiDocker, color: "#2396ee", projects: 2, description: "Containerization and multi-stage builds" },
+    { name: "Kubernetes", icon: SiKubernetes, color: "#3a71e6", projects: 2, description: "Container orchestration and scaling in production environments" },
+    { name: "AWS SQS", icon: SiAmazonsqs, color: "#FF9900", projects: 1, description: "Built and maintained asynchronous processing workflows in production" },
+    { name: "Cron Jobs", icon: FaCogs, projects: 1, description: "Scheduled recurring background tasks for data sync and processing workflows" },
+    { name: "Supervisor", icon: FaCogs, projects: 1, description: "Managed and monitored background worker processes in production environments" },
+  ]
+  },
+  {
+    title: "Agile & Collaboration",
+    icon: Award,
+    color: "bg-gradient-to-br from-violet-500 to-violet-600",
+    category: ["Frontend", "Agile"],
+    skills: [
+    { name: "Jira", icon: SiJira, color: "#0052CC", projects: 1, description: "Sprint planning, backlog grooming, and issue tracking in Agile teams" },
+    { name: "Confluence", icon: SiConfluence, color: "#0052CC", projects: 1, description: "Team documentation, project specs, and knowledge sharing" },
+    { name: "Scrum", icon: SiScrumalliance, color: "#009FDA", projects: 1, description: "Worked in Scrum-based sprints with daily standups and retrospectives" },
+    { name: "Kanban", icon: FaBook, projects: 1, description: "Task management and workflow visualization using Kanban boards" },
+  ]
+  },
+  {
+    title: "Tools",
     icon: Layers,
     color: "bg-gradient-to-br from-red-500 to-red-600",
-    category: ["Frontend", "Backend"],
+    category: ["Frontend", "Backend", "Tools"],
     skills: [
-    { name: "React.js", icon: SiReact, color: "#61DAFB", projects: 4, description: "Built dynamic UIs for research and production apps" },
-    { name: "Express.js", icon: SiExpress, color: "#002233", projects: 1, description: "Developed backend APIs and middleware for Node.js services" },
-    { name: "Laravel", icon: SiLaravel, color: "#f6361c", projects: 1, description: "Created backend features and APIs for full-stack apps" },
-    { name: "Redux", icon: () => <img src="/icons/redux.svg" alt="redux" className="w-8 h-8" />, projects: 0, description: "Handled global state in React apps for predictable data flow" },
-    { name: "Node.js", icon: SiNodedotjs, color: "#83bf26", projects: 1, description: "Backend development, server logic, and integration with databases" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#61DAFB", projects: 3, description: "Rapid UI development and custom design systems" }, 
-    { name: "D3", icon: SiD3Dotjs, color: "#61DAFB", projects: 1, description: "Dynamic, data-driven visualizations for complex datasets" }
+    { name: "Git", icon: SiGit, color: "#f32b3b", projects: 10, description: "Version control and collaborative workflows" },
+    { name: "Lens", icon: SiLens, color: "#3D90CE", projects: 1, description: "Kubernetes IDE used for managing and monitoring cluster resources in production" },    
+    { name: "Postman", icon: SiPostman, color: "#ff6c37", projects: 4, description: "Used for testing REST APIs, automating requests, and validating backend responses" },
+    { name: "Grafana", icon: SiGrafana, color: "#F46800", projects: 1, description: "Designed dashboards for middleware and OMS monitoring; recognized for improving system observability" },
+    { name: "Bitbucket", icon: SiBitbucket, color: "#0052CC", projects: 1, description: "Git-based source control and code review in production team workflows" },
+    { name: "DBeaver", icon: SiDbeaver, color: "#382923", projects: 1, description: "Database management and SQL querying across MySQL, PostgreSQL, and Redis" },
+    { name: "Figma", icon: SiFigma, color: "#F24E1E", projects: 2, description: "Collaborated on UI designs and translated Figma prototypes into code" },
   ]
 
   },
@@ -133,13 +172,13 @@ const Skills = () => {
     // { name: "Supabase", level: 83, projects: 4, description: "Real-time subscriptions and auth" },
     { name: "MySQL", icon: () => <img src="/icons/mysql.svg" alt="mysql" className="w-9 h-9" />, projects: 4, description: "Relational database design and optimization" },
     { name: "PostgreSQL", icon: () => <img src="/icons/postgresql.svg" alt="postgresql" className="w-7 h-7" />, color:"#3a6c94", projects: 1, description: "Designed and queried relational databases for full-stack applications using SQL" },
+    { name: "Redis", icon: SiRedis, color: "#DC382D", projects: 1, description: "Caching and performance optimization in production environments" },
     { name: "Firebase", icon: () => <img src="/icons/firebase.svg" alt="firebase" className="w-8 h-8" />, projects: 5, description: "Real-time database and cloud functions" },
-    { name: "GraphQL", icon: SiGraphql , color: "#e63bad", projects: 0, description: "Embedded database solutions" },
   ]
   }];
 
 
-  const categories = ['All', 'Frontend', 'Backend', 'AI', 'Tools'];
+  const categories = ['All', 'Frontend', 'Backend', 'APIs', 'AI', 'DevOps', 'Agile', 'Tools'];
 
   const filteredSkills = activeFilter === 'All' ?
   skillsData :
@@ -149,27 +188,19 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16">
+        <div className="text-center mb-16">
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
             My Skills & Expertise
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive overview of my technical skills, tools, and certifications 
+            A comprehensive overview of my technical skills, tools, and certifications
             that enable me to deliver exceptional digital solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) =>
           <Button
             key={category}
@@ -185,7 +216,7 @@ const Skills = () => {
               {category}
             </Button>
           )}
-        </motion.div>
+        </div>
 
         {/* Skills Grid */}
         <AnimatePresence mode="wait">
@@ -197,31 +228,21 @@ const Skills = () => {
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {filteredSkills.map((category, index) =>
-            <motion.div
-              key={`${activeFilter}-${category.title}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}>
-
+            {filteredSkills.map((category) =>
+            <div key={`${activeFilter}-${category.title}`}>
                 <SkillCard
                 title={category.title}
                 icon={category.icon}
                 skills={category.skills}
                 color={category.color}
                 category={category.category}/>
-
-              </motion.div>
+              </div>
             )}
           </motion.div>
         </AnimatePresence>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.2 }}
-          className="text-center mt-16">
+        <div className="text-center mt-16">
 
           <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 max-w-6xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8">
@@ -230,52 +251,34 @@ const Skills = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: .5, duration: 0.2 }}
-                  className="text-3xl font-bold text-blue-500 mb-2">
-
+                <div className="text-3xl font-bold text-blue-500 mb-2">
                   {skillsData.reduce((acc, category) => acc + category.skills.length, 0) - 13}+ {/*change this when needed*/}
-                </motion.div>
+                </div>
                 <p className="text-gray-600 dark:text-gray-300">Technologies</p>
               </div>
-              
-              <div className="text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.6, duration: 0.2 }}
-                  className="text-3xl font-bold text-green-500 mb-2">
 
-                  {skillsData.reduce((acc, category) => 
-                  acc + category.skills.reduce((skillAcc, skill) => skillAcc + (skill.projects || 0), 0), 0
-                  )-61}+
-                </motion.div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-500 mb-2">
+                  10+
+                </div>
                 <p className="text-gray-600 dark:text-gray-300">Projects</p>
-              </div>           
+              </div>
 
-              
               <div className="text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.8, duration: 0.2 }}
-                  className="text-3xl font-bold text-orange-500 mb-2">
-
-                  1+
-                </motion.div>
+                <div className="text-3xl font-bold text-orange-500 mb-2">
+                  2.5+
+                </div>
                 <p className="text-gray-600 dark:text-gray-300">Years Experience</p>
               </div>
             </div>
             
             <p className="text-gray-600 dark:text-gray-300 text-lg">
-              Technology evolves rapidly, and so do I. I'm constantly learning new tools, 
-              frameworks, and best practices to stay at the forefront of web development 
+              Technology evolves rapidly, and so do I. I'm constantly learning new tools,
+              frameworks, and best practices to stay at the forefront of web development
               and deliver cutting-edge solutions.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>);
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, useInView } from 'motion/react';
+import { motion } from 'motion/react';
 import { Calendar, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -18,6 +18,29 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
+{
+  id: '0',
+  role: 'Full Stack Developer',
+  company: 'Rebike Mobility GmbH',
+  location: 'Germany',
+  duration: 'Nov 2025 - Apr 2026',
+  description: 'Worked in an Agile environment contributing to production-grade backend systems and middleware architecture for a Shopify-based e-mobility platform.',
+  achievements: [
+    'Designed and extended middleware services for synchronizing product data with Shopify platforms',
+    'Implemented business logic for shipping profiles, product metafields, and payment-provider-based product eligibility',
+    'Built and maintained asynchronous processing workflows using AWS SQS, cron jobs, and background workers',
+    'Integrated GraphQL APIs for efficient data exchange between backend services and frontend applications',
+    'Contributed to deployment workflows using Bitbucket, Jenkins, Docker image builds, and Kubernetes-based runtime environments',
+    'Worked with AWS-based production infrastructure including S3, EC2, and load balancing',
+    'Utilized PostgreSQL for structured data management and Redis for caching and performance optimization',
+    'Designed and implemented Grafana dashboards for middleware and OMS systems — received recognition for improving system observability',
+    'Developed a full-stack feature for store location display, including backend logic and frontend UI with map integration',
+    'Contributed to a custom checkout application using TypeScript and Bun with eligibility-based logic for bike-specific checkout flows',
+    'Prototyped an AI-powered chatbot using Retrieval-Augmented Generation (RAG) to improve product information accessibility for customers'
+  ],
+  technologies: ['TypeScript', 'Node.js', 'Bun', 'PHP', 'PostgreSQL', 'Redis', 'AWS SQS', 'AWS S3', 'AWS EC2', 'GraphQL', 'Docker', 'Kubernetes', 'Jenkins', 'Bitbucket', 'Grafana', 'Shopify Admin API', 'Shopify Storefront API', 'Jira', 'Confluence'],
+  companyType: 'E-Mobility & Tech'
+},
 {
   id: '1',
   role: 'Full Stack Developer Intern (Intern)',
@@ -64,7 +87,7 @@ const experiences: Experience[] = [
   achievements: [
     'Worked on supervised learning models for classification and regression tasks using scikit-learn',
     'Performed data preprocessing, feature selection, and model evaluation on structured datasets',
-    'Implemented training pipelines with cross-validation, hyperparameter tuning, and metrics tracking',    
+    'Implemented training pipelines with cross-validation, hyperparameter tuning, and metrics tracking',
     'Visualized model performance and feature importance using Matplotlib and Seaborn',
     'Collaborated with data scientists to optimize model accuracy and reduce overfitting'],
 
@@ -80,28 +103,18 @@ interface ExperienceCardProps {
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <div ref={ref} className="relative flex items-center mb-12">
+    <div className="relative flex items-center mb-12">
       {/* Timeline Line */}
       <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-200 to-purple-200"></div>
-      
+
       {/* Timeline Dot */}
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.2 }}
-        className="absolute left-6 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white shadow-lg z-10">
-      </motion.div>
+      <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white shadow-lg z-10">
+      </div>
 
       {/* Card */}
-      <motion.div
-        initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
-        animate={isInView ? { x: 0, opacity: 1 } : { x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 + 0.2 }}
-        className={`ml-32 w-full max-w-2xl mr-auto`}>
+      <div className={`ml-32 w-full max-w-2xl mr-auto`}>
 
         <Card className="border border-gray-200 hover:shadow-lg transition-all duration-300 bg-white">
           <CardContent className="p-6">
@@ -145,7 +158,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
               </div>
             </div>
 
-            {/* Expandable Content */}
+            {/* Expandable Content — kept as interaction animation */}
             <motion.div
               initial={false}
               animate={{ height: isExpanded ? 'auto' : 0 }}
@@ -191,12 +204,12 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
             </Button>
           </CardContent>
         </Card>
-      </motion.div>
+      </div>
     </div>);
 
 };
 
-const handleDownloadCV = () => {    
+const handleDownloadCV = () => {
 
   // sharing link to download link
   const fileId = '1kConc17LaqU6VI7ojVKGCStlCw33krHb';
@@ -205,7 +218,7 @@ const handleDownloadCV = () => {
 
   // Open PDF in new tab
   window.open(cvUrl, '_blank');
-    
+
   // Trigger download
   const link = document.createElement('a');
   link.href = downloadUrl;
@@ -216,25 +229,17 @@ const handleDownloadCV = () => {
 };
 
 const ExperienceSection: React.FC = () => {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
-    <section id="experience" ref={ref} className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="experience" className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16">
-
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional Experience</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             A journey through my career milestones, showcasing growth, impact, and technical expertise
             across diverse projects and technologies.
           </p>
-        </motion.div>
+        </div>
 
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
@@ -248,16 +253,11 @@ const ExperienceSection: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16">
-
+        <div className="text-center mt-16">
           <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3" onClick={handleDownloadCV}>
             Download Full Resume
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>);
 

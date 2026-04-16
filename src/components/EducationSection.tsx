@@ -38,7 +38,7 @@ const EducationSection = () => {
     institution: "University Of Konstanz",
     location: "Konstanz, Germany",
     period: "2022 - 2025",
-    gpa: "2.5/4.0",
+    gpa: "2.3",
     honors: ["NLP", "Data Science & Visualization", "Database Architecture", "Algorithm Engineering"],
     // description: "Specialized in Machine Learning and Artificial Intelligence with focus on Deep Learning architectures and Natural Language Processing."
   },
@@ -82,7 +82,7 @@ const EducationSection = () => {
     id: "3",
     name: "AWS Data Analytics",
     provider: "Amazon Web Services",
-    icon: <img src='https://media.licdn.com/dms/image/v2/D4E0BAQFqdm1TZ-RZKQ/company-logo_100_100/B4EZgOay6gHEAY-/0/1752588562343/amazon_web_services_logo?e=1762992000&v=beta&t=cTvB_H0qvjOVGLJ1KcdpU592UHsbLzfw6wPYPwluDFg' alt='AWS'/>,
+    icon: <img src="/icons/aws.svg" alt="AWS" className="w-9 h-9" />,
     color: "border-blue-500",
     issueDate: "2021",
     credentialId: "9L5MFP4MK2NS",
@@ -93,7 +93,7 @@ const EducationSection = () => {
     id: "4",
     name: "Microsoft Professional Program in AI",
     provider: "Microsoft",
-    icon: <img src='https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1762992000&v=beta&t=9aEoOBxCQrZ_GwxuO5RbhdJmE0IIC36kxgRwXXyPjYY' alt='Microsoft'/>,
+    icon: <img src="/icons/microsoft.svg" alt="Microsoft" className="w-8 h-8" />,
     color: "border-cyan-400",
     issueDate: "2020",
     credentialId: "",
@@ -104,7 +104,7 @@ const EducationSection = () => {
     id: "5",
     name: "Digital Transformation with Google Cloud",
     provider: "Google",
-    icon: <img src='https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1762992000&v=beta&t=IRg6U5Y0wLiwKKScmm8QRs1ltqsQuamyWm_-jpDyPWM' alt='Google'/>,
+    icon: <img src="/icons/google.svg" alt="Google" className="w-8 h-8" />,
     color: "border-purple-400",
     issueDate: "2021",
     credentialId: "DBD3JABMJ69K",
@@ -115,7 +115,7 @@ const EducationSection = () => {
     id: "6",
     name: "Foundations: Data, Data, Everywhere",
     provider: "Google",
-    icon: <img src='https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1762992000&v=beta&t=IRg6U5Y0wLiwKKScmm8QRs1ltqsQuamyWm_-jpDyPWM' alt='Google'/>,
+    icon: <img src="/icons/google.svg" alt="Google" className="w-8 h-8" />,
     color: "border-purple-400",
     issueDate: "2021",
     credentialId: "ARFR9NVA6ERI",
@@ -126,7 +126,7 @@ const EducationSection = () => {
     id: "7",
     name: "Data-Driven Decisions",
     provider: "Google",
-    icon: <img src='https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1762992000&v=beta&t=IRg6U5Y0wLiwKKScmm8QRs1ltqsQuamyWm_-jpDyPWM' alt='Google'/>,
+    icon: <img src="/icons/google.svg" alt="Google" className="w-8 h-8" />,
     color: "border-purple-400",
     issueDate: "2021",
     credentialId: "k8emxkbmwc7r",
@@ -136,37 +136,10 @@ const EducationSection = () => {
 ];
 
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
   return (
     <section id="education" className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-12">
+        <div className="text-center mb-12">
 
           <div className="flex items-center justify-center gap-3 mb-4">
             <motion.div
@@ -182,29 +155,20 @@ const EducationSection = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Academic excellence and professional certifications that drive innovation and expertise
           </p>
-        </motion.div>
+        </div>
 
         {/* Education Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-16">
+        <div className="mb-16">
 
-          <motion.h3
-            variants={itemVariants}
-            className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
-
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-blue-600"/>
             Education
-          </motion.h3>
+          </h3>
 
           <div className="space-y-6">
-            {education.map((edu, index) =>
+            {education.map((edu) =>
             <motion.div
               key={edu.id}
-              variants={itemVariants}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}>
 
@@ -246,15 +210,12 @@ const EducationSection = () => {
                         {edu.honors && edu.honors.length > 0 &&
                       <div className="flex flex-wrap gap-2">
                             {edu.honors.map((honor, idx) =>
-                        <motion.span
+                        <span
                           key={idx}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: idx * 0.1 }}
                           className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
 
                                 {honor}
-                              </motion.span>
+                              </span>
                         )}
                           </div>
                       }
@@ -265,47 +226,25 @@ const EducationSection = () => {
               </motion.div>
             )}
           </div>
-        </motion.div>
+        </div>
 
         {/* Certifications Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}>
+        <div>
 
-          <motion.h3
-            variants={itemVariants}
-            className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
-
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
             <Award className="h-6 w-6 text-indigo-600"/>
             Professional Certifications
-          </motion.h3>
+          </h3>
 
-          <motion.div
-            variants={containerVariants}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
-            {certifications.map((cert, index) =>
-            <motion.div
-              key={cert.id}
-              variants={itemVariants}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: index * 0.1 }
-              }}
-              viewport={{ once: true }}>
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {certifications.map((cert) =>
+            <div key={cert.id}>
                 <CertificationBadge {...cert}/>
-              </motion.div>
+              </div>
             )}
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="mt-12 text-center">
-
+          <div className="mt-12 text-center">
             <Button
               variant="outline"
               size="lg"
@@ -315,8 +254,8 @@ const EducationSection = () => {
               <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-200"/>
               View All Credentials
             </Button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>);
 

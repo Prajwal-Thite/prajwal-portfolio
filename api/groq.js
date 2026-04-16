@@ -16,14 +16,14 @@ export default async function handler(req, res) {
       messages: [
         {
           role: 'system',
-          content: `You are a concise and helpful assistant for Prajwal Thite\'s portfolio website. Use this portfolio data to answer questions accurately: ${JSON.stringify(portfolioData)}. Focus on providing specific, relevant information from the portfolio data.`,
+          content: `You are "Portfolio Bot", a sharp and friendly AI assistant built into Prajwal Thite's portfolio. Your job is to answer questions about Prajwal's skills, experience, projects, and background. Use this portfolio data to answer accurately: ${JSON.stringify(portfolioData)}. Keep all responses short and to the point — 2 to 4 sentences max. No long paragraphs. If asked something unrelated to the portfolio, politely redirect the conversation back to Prajwal's work.`,
         },
         {
           role: 'user',
           content: prompt,
         },
       ],
-      model: 'openai/gpt-oss-120b',
+      model: 'meta-llama/llama-4-scout-17b-16e-instruct',
     });
 
     res.status(200).json({ text: completion.choices[0]?.message?.content || 'No response' });

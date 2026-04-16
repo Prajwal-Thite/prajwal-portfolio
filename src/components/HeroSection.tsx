@@ -8,7 +8,7 @@ import { Github, Linkedin, Download, ExternalLink } from 'lucide-react';
 
 const HeroSection = () => {
   const { displayedText, isComplete } = useTypewriter({
-    text: "Full Stack Developer & AI Enthusiast | Building the Future with Web & AI",
+    text: "Full Stack Developer | Backend · APIs · Cloud",
     speed: 50,
     delay: 1000
   });
@@ -18,7 +18,7 @@ const HeroSection = () => {
   const handleDownloadCV = () => {    
 
     // sharing link to download link
-    const fileId = '1kConc17LaqU6VI7ojVKGCStlCw33krHb';
+    const fileId = '132FIHI5tmqEwk0dAgviXGmCCJw5JTwBE';
     const cvUrl = `https://drive.google.com/file/d/${fileId}/view`;
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
@@ -49,6 +49,7 @@ const HeroSection = () => {
 
       {/* Main content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        {/* Name with entrance animation */}
         {/* Name with entrance animation */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

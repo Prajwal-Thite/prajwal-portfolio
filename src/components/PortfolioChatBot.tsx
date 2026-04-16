@@ -22,7 +22,7 @@ const PortfolioChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
   {
     id: '1',
-    text: "Hi! I'm an AI assistant trained on this portfolio. I can answer questions about projects, experience, skills, and more. What would you like to know?",
+    text: "Hey! I'm Portfolio Bot 👋 Ask me anything about Prajwal — his experience, skills, projects, or how to get in touch.",
     isBot: true,
     timestamp: new Date()
   }]
@@ -127,7 +127,7 @@ const PortfolioChatBot = () => {
           exit={{ opacity: 0, y: 100, scale: 0.8 }}
           className="fixed bottom-6 right-0 z-50 w-96 max-w-[calc(100vw-2rem) ]]">
 
-            <Card className="border-0 shadow-2xl overflow-hidden">
+            <Card className="border-0 shadow-2xl overflow-hidden h-full flex flex-col">
               <CardHeader className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg font-semibold flex items-center gap-2">
@@ -166,11 +166,12 @@ const PortfolioChatBot = () => {
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}>
+                exit={{ height: 0, opacity: 0 }}
+                className="flex flex-col flex-1 overflow-hidden">
 
-                    <CardContent className="p-0">
+                    <CardContent className="p-0 flex flex-col flex-1 overflow-hidden">
                       {/* Messages Area */}
-                      <div className="min-h-[310px] max-h-[550px] overflow-y-auto p-4 bg-gray-50">
+                      <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
                         {messages.map((message) =>
                     <ChatMessage
                       key={message.id}

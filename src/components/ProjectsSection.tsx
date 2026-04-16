@@ -108,7 +108,7 @@ const projects: Project[] = [
   longDescription: `Dlock is a cutting-edge IoT-powered door lock system that redefines smart home security. Designed for global accessibility and real-time safety monitoring, Dlock integrates features like live temperature sensing, fire and gas leak detection, motion sensing, and emergency alerts. If triggered, it automatically notifies you and emergency services for immediate action. Built on the NodeMCU ESP8266 with components like SG90 servos, MQ2 gas sensors, LM35 temperature sensors, PIR and ultrasonic sensors, and piezo plates, the system is both robust and responsive. The backend leverages Firebase for seamless real-time communication with the control app. Dlock delivers peace of mind with intelligent automation and remote access from anywhere in the world.`,
   techStack: ['Embedded C', 'NodeMCU ESP8266', 'Firebase', 'MQ2', 'LM35', 'PIR Sensor', 'Servo Motor', 'LDR', 'IoT'],
   githubUrl: 'https://github.com/Prajwal-Thite/Dlock',
-  imageUrl: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQF4wO_mG4Q_GA/articleshare-shrink_160/articleshare-shrink_160/0/1711815755000?e=1749700800&v=beta&t=203j-IKoaFbl6W-n98bxDPAwG1k_hzlNOHrq2To6Uns', // Replace with actual image if available
+  imageUrl: '/icons/IoT-Smart-Lock-Vulnerability.jpg',
   demoVideoUrl: '', // Add if available
   category: 'AI', // or 'Mobile' / 'Web' depending on app integration
   featured: false
@@ -151,43 +151,22 @@ const ProjectsSection = () => {
   projects :
   projects.filter((project) => project.category.toLowerCase() === selectedCategory.toLowerCase());
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16">
-
+        <div className="text-center mb-16">
           <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
             Featured Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Showcasing innovative solutions across AI, web development, and mobile applications. 
+            Showcasing innovative solutions across AI, web development, and mobile applications.
             Each project represents a unique challenge solved with cutting-edge technology.
           </p>
-        </motion.div>
+        </div>
 
         {/* Filter Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-12">
+        <div className="mb-12">
 
           <Tabs defaultValue="All" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 bg-white/80 backdrop-blur-sm border border-gray-200 shadow-lg">
@@ -221,7 +200,7 @@ const ProjectsSection = () => {
               </TabsTrigger>
             </TabsList>
           </Tabs>
-        </motion.div>
+        </div>
 
         {/* Projects Grid */}
         {/* <motion.div
@@ -240,39 +219,28 @@ const ProjectsSection = () => {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+            <div key={project.id}>
               <ProjectCard
                 project={project}
                 index={index}
               />
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16">
-
+        <div className="text-center mt-16">
           <p className="text-lg text-gray-600 mb-6">
             Interested in collaborating or learning more about my work?
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.open('https://github.com/Prajwal-Thite?tab=repositories', '_blank')} 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300">             
+            onClick={() => window.open('https://github.com/Prajwal-Thite?tab=repositories', '_blank')}
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300">
             View All Projects on GitHub
           </motion.button>
-        </motion.div>
+        </div>
       </div>
     </section>);
 

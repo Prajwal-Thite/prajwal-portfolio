@@ -45,18 +45,18 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   personalProfile: {
     name: "Prajwal Thite",
-    title: "Full Stack Developer & AI Enthusiast",
+    title: "Full Stack Developer",
     summary:
-      "Prajwal is a passionate and driven software developer with a strong focus on full-stack development and artificial intelligence. He enjoys crafting applications that leverage modern web technologies and AI to solve complex real-world problems efficiently and elegantly."
+      "Prajwal is a Full Stack Developer with a stronger focus on backend development and around 2.5 years of combined professional experience. He is experienced in building reliable backend systems, solving business logic problems, and developing features that connect different parts of an application. He has worked on backend services and system integrations for Shopify-based platforms, including APIs, queue-based workflows, deployment processes, and monitoring in production environments. He is also interested in AI-driven applications such as RAG systems and backend automation."
   },
 
   technicalSkills: {
-    programmingLanguages: ["PHP", "JavaScript", "Python", "SQL"],
-    frameworksAndLibraries: ["React", "Laravel", "Node.js", "Express.js", "Redux" , "Tensor Flow"],
-    frontend:["HTML5", "CSS3", "Trailwind CSS", "REST APIs"],
-    databases: ["MySQL", "GraphQl"],
-    Cloud_and_CRM_Platforms: ["Salesforce", "n8n"],
-    toolsAndPlatforms: ["Git & GitHub", "Kubernetes", "Docker", "Postman"]
+    programmingLanguages: ["JavaScript (ES6+)", "TypeScript", "Python", "SQL", "Liquid", "PHP"],
+    frameworksAndLibraries: ["React", "Next.js", "Laravel", "Node.js", "Express.js", "Redux", "TensorFlow"],
+    frontend: ["HTML5", "CSS3", "Tailwind CSS", "Shopify Theme Development"],
+    databases: ["MySQL", "PostgreSQL", "Redis", "Firebase", "GraphQL"],
+    Cloud_and_CRM_Platforms: ["AWS (S3, EC2, SQS, ELB)", "Salesforce (AI Associate, Administrator)", "Docker", "Kubernetes", "Jenkins"],
+    toolsAndPlatforms: ["Git", "Bitbucket", "Postman", "Grafana", "Jira", "Confluence", "Figma", "DBeaver", "Lens"]
   },
 
   education: {
@@ -65,7 +65,8 @@ export const portfolioData: PortfolioData = {
     duration: {
       start: "October 2022",
       end: "June 2025"
-    }
+    },
+    gpa: "2.3 (German scale)"
   },
 
 projects: [
@@ -116,6 +117,20 @@ projects: [
 
 experience: [
   {
+    title: "Full Stack Developer",
+    company: "Rebike Mobility GmbH",
+    location: "Germany",
+    duration: "Nov 2025 – Apr 2026",
+    description:
+      "Worked in an Agile environment contributing to production-grade backend systems and middleware architecture for a Shopify-based e-mobility platform. Designed middleware services, asynchronous workflows with AWS SQS, Grafana monitoring dashboards, and prototyped a RAG-based AI chatbot.",
+    technologies: [
+      "TypeScript", "Node.js", "Bun", "PHP", "PostgreSQL", "Redis",
+      "AWS SQS", "AWS S3", "AWS EC2", "GraphQL", "Docker", "Kubernetes",
+      "Jenkins", "Bitbucket", "Grafana", "Shopify Admin API", "Shopify Storefront API",
+      "Jira", "Confluence"
+    ]
+  },
+  {
     title: "Full Stack Developer Intern",
     company: "Code Cyper",
     location: "Delhi, India",
@@ -155,11 +170,13 @@ experience: [
 ],
 
   achievements: [
-    "Successfully deployed full-stack applications with integrated AI capabilities",
-    "Contributed to open-source projects on GitHub",
-    "Participated in coding competitions and hackathons",
+    "Worked on production-grade backend systems and middleware architecture at Rebike Mobility GmbH",
+    "Received recognition for designing Grafana dashboards that improved system observability for middleware and OMS systems",
+    "Prototyped an AI-powered RAG chatbot to improve product information accessibility for customers",
+    "Contributed to custom checkout application using TypeScript and Bun with eligibility-based logic",
     "Earned the Salesforce Certified Administrator and AI Associate credentials in 2025",
     "Achieved AWS Data Analytics certification, demonstrating proficiency in cloud-based data solutions",
+    "Contributed to open-source projects on GitHub",
   ],
 
   contactInformation: {
