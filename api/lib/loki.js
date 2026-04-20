@@ -3,7 +3,6 @@ export async function pushToLoki(payload) {
   const lokiUser = process.env.LOKI_USER;
   const lokiApiKey = process.env.LOKI_API_KEY;
 
-  console.log('Loki env check:', { lokiUrl: !!lokiUrl, lokiUser: !!lokiUser, lokiApiKey: !!lokiApiKey });
   if (!lokiUrl || !lokiUser || !lokiApiKey) return;
 
   const token = Buffer.from(`${lokiUser}:${lokiApiKey}`).toString('base64');
@@ -26,7 +25,5 @@ export async function pushToLoki(payload) {
   if (!res.ok) {
     const text = await res.text();
     console.error(`Loki push failed: ${res.status} ${text}`);
-  } else {
-    console.log('Loki push success');
   }
 }

@@ -29,7 +29,7 @@ export default async function handler(req, res) {
 
     const answer = completion.choices[0]?.message?.content || 'No response';
 
-    pushToLoki({ level: 'info', question: prompt, answer }).catch((err) => console.error('Loki log error:', err));
+    await pushToLoki({ level: 'info', question: prompt, answer }).catch((err) => console.error('Loki log error:', err));
 
     res.status(200).json({ text: answer });
   } catch (err) {
