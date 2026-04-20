@@ -8,7 +8,7 @@ export async function pushToLoki(payload) {
   const token = Buffer.from(`${lokiUser}:${lokiApiKey}`).toString('base64');
   const timestampNs = (BigInt(Date.now()) * 1000000n).toString();
 
-  await fetch(`${lokiUrl}/loki/api/v1/push`, {
+  const res = await fetch(`${lokiUrl}/loki/api/v1/push`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -21,4 +21,11 @@ export async function pushToLoki(payload) {
       }],
     }),
   });
+
+  if (!res.ok) {
+    const text = await res.text();
+    console.error(`Loki push failed: ${res.status} ${text}`);
+  } else {
+    console.log('Loki push success');
+  }
 }
