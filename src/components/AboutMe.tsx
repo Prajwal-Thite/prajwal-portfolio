@@ -21,17 +21,18 @@ const AboutMe = () => {
 
             <div className="space-y-6">
               <p className="text-lg text-gray-600 leading-relaxed">
-                I'm a Full Stack Developer with a stronger focus on backend systems, building reliable
-                APIs, queue-based workflows, and production integrations. I have around 2.5 years of
-                combined professional experience working on Shopify-based platforms and enterprise
-                e-commerce solutions.
+                I'm a Full Stack Developer with a stronger focus on backend development and around
+                3+ years of hands-on software development experience across professional roles,
+                internships, and advanced academic projects. Focused on building reliable systems,
+                solving business logic problems, and developing features that connect different parts
+                of an application.
               </p>
 
               <p className="text-lg text-gray-600 leading-relaxed">
-                I've worked in production environments with AWS (SQS, S3, EC2), PostgreSQL, Redis,
-                Docker, Kubernetes, and Jenkins. I'm also interested in AI-driven applications —
-                including RAG systems and backend automation — and continue to grow as a
-                backend-focused full stack developer with TypeScript and Python.
+                Experienced in API integrations, asynchronous workflows, deployment-related processes,
+                and monitoring across modern web platforms with AWS (SQS, S3, EC2), PostgreSQL,
+                Redis, Docker, Kubernetes, Grafana and Jenkins. Particularly drawn to AI-enabled products,
+                AI-supported development workflows, and backend automation.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
