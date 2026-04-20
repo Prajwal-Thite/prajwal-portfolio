@@ -11,8 +11,10 @@ export default async function handler(req, res) {
   }
 
   const { prompt } = req.body;
+  const userAgent = req.headers['user-agent'] || 'unknown';
 
   try {
+    const start = Date.now();
     const completion = await groq.chat.completions.create({
       messages: [
         {
@@ -26,15 +28,16 @@ export default async function handler(req, res) {
       ],
       model: 'meta-llama/llama-4-scout-17b-16e-instruct',
     });
+    const responseTime = Date.now() - start;
 
     const answer = completion.choices[0]?.message?.content || 'No response';
 
-    pushToLoki({ level: 'info', question: prompt, answer }).catch((err) => console.error('Loki log error:', err));
+    await pushToLoki({ level: 'info', question: prompt, answer, user_agent: userAgent, response_time_ms: responseTime }).catch((err) => console.error('Loki log error:', err));
 
     res.status(200).json({ text: answer });
   } catch (err) {
     console.error('Groq API error:', err);
-    pushToLoki({ level: 'error', question: prompt, error: err.message, error_type: err.name }).catch(() => {});
+    pushToLoki({ level: 'error', question: prompt, error: err.message, error_type: err.name, user_agent: userAgent }).catch(() => {});
     res.status(500).json({ error: 'Internal server error' });
   }
 }
