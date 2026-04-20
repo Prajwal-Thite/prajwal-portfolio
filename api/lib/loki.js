@@ -6,7 +6,10 @@ export async function pushToLoki(payload) {
   if (!lokiUrl || !lokiUser || !lokiApiKey) return;
 
   const token = Buffer.from(`${lokiUser}:${lokiApiKey}`).toString('base64');
-  const timestampNs = (BigInt(Date.now()) * 1000000n).toString();
+  const now = new Date();
+  const timestampNs = (BigInt(now.getTime()) * 1000000n).toString();
+
+  const enrichedPayload = { ...payload, timestamp: now.toISOString() };
 
   const res = await fetch(`${lokiUrl}/loki/api/v1/push`, {
     method: 'POST',
@@ -17,7 +20,7 @@ export async function pushToLoki(payload) {
     body: JSON.stringify({
       streams: [{
         stream: { service: 'portfolio-chatbot', level: payload.level || 'info' },
-        values: [[timestampNs, JSON.stringify(payload)]],
+        values: [[timestampNs, JSON.stringify(enrichedPayload)]],
       }],
     }),
   });
