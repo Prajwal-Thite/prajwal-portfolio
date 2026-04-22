@@ -19,6 +19,7 @@ interface Message {
 const PortfolioChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
   {
     id: '1',
@@ -38,6 +39,12 @@ const PortfolioChatBot = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => setShowTooltip(true), 1000);
+    const hideTimer = setTimeout(() => setShowTooltip(false), 7000);
+    return () => { clearTimeout(showTimer); clearTimeout(hideTimer); };
+  }, []);
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -102,13 +109,27 @@ const PortfolioChatBot = () => {
           exit={{ scale: 0, opacity: 0 }}
           className="fixed bottom-6 right-6 z-50">
 
-            <Button
-            onClick={() => setIsOpen(true)}
-            className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 shadow-lg hover:shadow-xl transition-all duration-300"
-            size="icon">
-
-              <MessageCircle className="w-6 h-6 text-white"/>
-            </Button>
+            <div className="flex items-center gap-3">
+              <AnimatePresence>
+                {showTooltip &&
+                  <motion.div
+                    initial={{ opacity: 0, x: 10, scale: 0.9 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: 10, scale: 0.9 }}
+                    transition={{ duration: 0.25 }}
+                    className="relative bg-white text-gray-800 text-sm font-medium px-4 py-3 rounded-2xl shadow-lg border border-gray-100 w-40">
+                    <span className="block">Have a question? I'm here to help👋</span>                    
+                    <span className="absolute -right-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-8 border-b-8 border-l-8 border-t-transparent border-b-transparent border-l-white" />
+                  </motion.div>
+                }
+              </AnimatePresence>
+              <Button
+                onClick={() => { setIsOpen(true); setShowTooltip(false); }}
+                className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 shadow-lg hover:shadow-xl transition-all duration-300"
+                size="icon">
+                <MessageCircle className="w-6 h-6 text-white"/>
+              </Button>
+            </div>
           </motion.div>
         }
       </AnimatePresence>
