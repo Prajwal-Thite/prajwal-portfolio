@@ -42,7 +42,7 @@ const PortfolioChatBot = () => {
 
   useEffect(() => {
     const showTimer = setTimeout(() => setShowTooltip(true), 1000);
-    const hideTimer = setTimeout(() => setShowTooltip(false), 6000);
+    const hideTimer = setTimeout(() => setShowTooltip(false), 7000);
     return () => { clearTimeout(showTimer); clearTimeout(hideTimer); };
   }, []);
 
@@ -117,8 +117,8 @@ const PortfolioChatBot = () => {
                     animate={{ opacity: 1, x: 0, scale: 1 }}
                     exit={{ opacity: 0, x: 10, scale: 0.9 }}
                     transition={{ duration: 0.25 }}
-                    className="relative bg-white text-gray-800 text-sm font-medium px-4 py-2 rounded-2xl shadow-lg border border-gray-100 whitespace-nowrap">
-                    Have a question? Ask me! 👋
+                    className="relative bg-white text-gray-800 text-sm font-medium px-4 py-3 rounded-2xl shadow-lg border border-gray-100 w-40">
+                    <span className="block">Have a question? I'm here to help👋</span>                    
                     <span className="absolute -right-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-8 border-b-8 border-l-8 border-t-transparent border-b-transparent border-l-white" />
                   </motion.div>
                 }
