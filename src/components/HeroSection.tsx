@@ -18,7 +18,7 @@ const HeroSection = () => {
   const handleDownloadCV = () => {    
 
     // sharing link to download link
-    const fileId = '132FIHI5tmqEwk0dAgviXGmCCJw5JTwBE';
+    const fileId = '1SUUwPQA8B8VgCW__AKIbsb4cUhXu0eQb';
     const cvUrl = `https://drive.google.com/file/d/${fileId}/view`;
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
