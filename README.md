@@ -1,82 +1,88 @@
-## Welcome to my Portfolio
-A clean, modern React app with TypeScript, Vite, TailwindCSS, ShadCN UI components and AI Chatbot for assistance. 
+# Prajwal Thite — Personal Portfolio
 
-## Tech Features
+A modern, animated personal portfolio website built with React and TypeScript, featuring an AI-powered chatbot, interactive skill filters, project showcases, and a full professional timeline.
 
-- ⚡️ **Vite** - Lightning fast build tool
-- 🔥 **React 18** - Latest React features
-- 🧩 **TypeScript** - Type safety for better developer experience
-- 🎨 **TailwindCSS** - Utility-first CSS framework
-- 🧰 **ShadCN UI** - Accessible and customizable UI components
-- 📱 **Responsive Design** - Mobile-first approach
-- 🧭 **React Router** - Easy client-side routing
-- 🔄 **React Query** - Data fetching and state management
-- 🧪 **Form Handling** - React Hook Form with Zod validation
-- 🤖 **AI Chatbot** - Interactive LLM-powered chat assistant
+**Live site:** [prajwalthite-portfolio.vercel.app](https://prajwalthite-portfolio.vercel.app)
+
+---
+
+## Features
+
+- **Hero Section** — Typewriter animation, mouse-parallax background, floating tech logos, and social/CV links
+- **About Me** — Interactive flip cards with certifications and personal interests
+- **Skills** — Filterable skill grid across Frontend, Backend, APIs, AI/ML, DevOps, Agile, and Tools
+- **Projects** — 9 projects categorized into Web, AI/ML, and Mobile with modal detail views
+- **Experience Timeline** — Expandable cards with achievements and tech stacks for 4 professional roles
+- **Education** — Academic background and coursework
+- **Contact** — Email form powered by EmailJS
+- **AI Chatbot** — Floating portfolio assistant powered by Groq SDK
+- **Analytics** — Vercel Analytics integration
+
+---
+
+## Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| Framework | React 18, TypeScript, Vite |
+| Styling | Tailwind CSS, shadcn/ui, Motion (Framer Motion) |
+| State & Forms | React Hook Form, Zod, TanStack Query |
+| AI & Integrations | Groq SDK, EmailJS |
+| Deployment | Vercel |
+
+---
 
 ## Getting Started
 
-### Prerequisites
+**Prerequisites:** Node.js 18+
 
-- Node.js 18+ 
-- npm or yarn or pnpm
-
-### Installation
-
-1. Clone this repository:
 ```bash
-git clone https://github.com/your-username/prajwal-portfolio.git
-cd portfolio
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-# or
-yarn
-# or
-pnpm install
-```
 
-3. Start the development server:
-```bash
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-4. Open your browser and visit `http://localhost:5173`
+---
 
 ## Project Structure
 
 ```
-portfolio/
-├── public/              # Static assets
-│   ├── components/      # Reusable components
-│   │   └── ui/          # UI components from ShadCN
-│   ├── hooks/           # Custom React hooks
-│   ├── lib/             # Utility functions and libraries
-│   ├── pages/           # Page components
-│   ├── App.tsx          # Main application component
-│   ├── index.css        # Global styles
-│   └── main.tsx         # Application entry point
-├── .gitignore
-├── package.json         # Project dependencies and scripts
-├── tailwind.config.ts   # TailwindCSS configuration
-├── tsconfig.json        # TypeScript configuration
-└── vite.config.ts       # Vite configuration
+src/
+├── components/         # Feature components (Hero, About, Skills, Projects, etc.)
+│   └── ui/             # shadcn/ui primitives
+├── hooks/              # Custom hooks (typewriter, mouse parallax, mobile)
+├── pages/              # Page-level components (HomePage, NotFound)
+└── lib/                # Utility functions
 ```
 
-## Building for Production
+---
 
-```bash
-npm run build
-# or
-yarn build
-# or
-pnpm build
-```
+## Projects Showcased
 
-The built files will be in the `dist` directory, ready to be deployed.
+| Project | Category | Description |
+|---|---|---|
+| Parachute Home | Web | E-commerce platform — React, Node.js, Shopify, Kubernetes |
+| JUNOCO | Web | Skincare storefront — GraphQL, Shopify Storefront API, Stripe |
+| RLHF-Blender | AI | Python toolkit for RLHF pipeline analysis with GPT-4o |
+| Conflict Analysis Toolkit | Web | Data-driven conflict analysis with D3 visualisations |
+| Auto-Shading Smart Glasses | AI/IoT | Arduino-based wearable with UV sensor shading |
+| Servo Hand | AI/IoT | AI-powered robotic hand with reinforcement learning control |
+| Dlock | AI/IoT | IoT smart lock with fire/gas detection and Firebase backend |
+| Planet | Mobile | Flutter app for environmental action and tree planting |
+| Chantix | Mobile/ML | Anti-smoking app with SVR-based health predictions |
+
+---
+
+## Contact
+
+- **Email:** prajwalthite.de@gmail.com
+- **LinkedIn:** [linkedin.com/in/prajwal-thite](https://www.linkedin.com/in/prajwal-thite/)
+- **GitHub:** [github.com/Prajwal-Thite](https://github.com/Prajwal-Thite)
