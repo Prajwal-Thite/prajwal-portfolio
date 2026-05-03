@@ -24,7 +24,7 @@ const projects: Project[] = [
   title: 'Parachute Home',
   description: 'A modern home essentials brand offering premium bedding, bath, and decor with a focus on comfort, quality, and sustainability.',
   longDescription: `Parachute Home is a Los Angeles-based lifestyle brand founded in 2014 by Ariel Kaye. Initially launched as an online-only, direct-to-consumer company specializing in high-quality bedding, Parachute has since expanded its product line to include bath linens, decor, and furniture. The brand emphasizes comfort, quality, and sustainability, sourcing premium materials like European flax and long-staple Turkish cotton. Parachute is committed to environmentally responsible practices, including a linen recycling program and the use of sustainable materials such as organic cotton and recycled polyester. With a growing number of brick-and-mortar stores across the United States, Parachute continues to blend modern design with a commitment to wellness and sustainability.`,
-  techStack: ['React', 'Node.js', "MySQL", "Express.js", 'TypeScript', "Tailwind CSS", "REST APIs", "Shopify Payments", "Kubernetes"],
+  techStack: ['React', 'Node.js', "MySQL", "Express.js", 'Typescript', "Tailwind CSS", "REST APIs", "Shopify Payments", "Kubernetes"],
   githubUrl: 'https://github.com/Prajwal-Thite', // Not applicable
   liveUrl: 'https://parachutehome.com/',
   imageUrl: 'https://cdn.prod.website-files.com/6778d1207e03199a243db033/6778d1207e03199a243db710_parachute-cover-673d7853dacea.webp', // Add if an image or screenshot is available
@@ -38,7 +38,7 @@ const projects: Project[] = [
   title: 'JUNOCO',
   description: 'A sustainable skincare brand offering minimalist, high-performance products with a focus on intentional ingredients and eco-friendly practices.',
   longDescription: `JUNOCO is a California-based skincare brand committed to sustainability and minimalism. Founded by Kyle Jiang, the company emphasizes the use of fewer than 20 ingredients in its products to ensure efficacy without unnecessary fillers. JUNOCO's offerings, such as the Clean 10 Cleansing Balm, are designed to deliver high performance while being environmentally conscious. The brand also focuses on reducing waste through initiatives like refillable packaging and FSC-certified materials. JUNOCO's mission extends beyond skincare, aiming to challenge conventional beauty standards and promote inclusivity through campaigns like #ToBeHuman.`,
-  techStack: ['React', 'Node.js', 'Cloudinary', 'REST API', "GraphQL", 'Express.js', 'TypeScript', 'Stripe', 'Google Analytics', 'Tailwind CSS', 'Framer Motion', 'Kubernetes', "Shopify Storefront API"],
+  techStack: ['React', 'Node.js', 'Cloudinary', 'REST API', "GraphQL", 'Express.js', 'TypeScript ', 'Stripe',  'Google Analytics', 'Tailwind CSS',  'Framer Motion',  'Kubernetes',  "Shopify Storefront API" ],
   githubUrl: 'https://github.com/Prajwal-Thite', // Not applicable
   liveUrl: 'https://www.junoco.com/',
   imageUrl: 'https://laurakatelucas.com/wp-content/uploads/2023/10/PA130122-scaled-1024x768.jpg', // Add if an image or screenshot is available
@@ -52,7 +52,7 @@ const projects: Project[] = [
   title: 'RLHF-Blender',
   description: 'A Python toolkit for combining and analyzing human feedback in Reinforcement Learning from Human Feedback (RLHF) pipelines.',
   longDescription: `RLHFBlender is a modular and extensible toolkit designed to support the analysis, blending, and refinement of human feedback signals within RLHF pipelines. It facilitates structured extraction of actions and rewards from natural language feedback and offers utilities for feedback classification and improvement. The toolkit is intended for researchers and developers working on training large language models with human feedback.`,
-  techStack: ['Python', 'React', 'Node.js', 'PostgreSQL', 'GPT-4o', 'REST API', 'TypeScript', 'Javascript', 'ML', 'TensorFlow', 'Transformer'],
+  techStack: ['Python', 'React', 'Node.js', 'PostgreSQL', 'GPT-4o', 'REST API', 'Typescript' , 'Javascript', 'ML', 'Tensor-Flow', 'Transformer'],
   githubUrl: 'https://github.com/Prajwal-Thite/rlhfblender',
   liveUrl: '', // Add if a live demo is available
   imageUrl: 'https://github.com/Prajwal-Thite/rlhfblender/blob/main/Task_Interface%20(1).png?raw=true', // Add if an image or screenshot is available
