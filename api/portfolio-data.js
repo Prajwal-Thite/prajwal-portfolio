@@ -4,7 +4,7 @@ export const portfolioData = {
     name: "Prajwal Thite",
     title: "Full Stack Developer",
     summary:
-      "Full Stack Developer with a stronger focus on backend development and 3+ years of hands-on software development experience across professional roles, internships, and advanced academic projects. Focused on building reliable systems, solving business logic problems, and developing features that connect different parts of an application. Experienced in API integrations, asynchronous workflows, deployment-related processes, and monitoring across modern web platforms. Particularly drawn to AI-enabled products, AI-supported development workflows, and backend automation."
+      "Full Stack Developer with a stronger focus on backend development and around 2.5 years of combined professional experience. Experienced in building reliable backend systems, solving business logic problems, and developing features that connect different parts of an application. Has worked on backend services and system integrations for Shopify-based platforms, including APIs, queue-based workflows, deployment processes, and monitoring in production environments. Interested in AI-driven applications such as RAG systems and backend automation."
   },
 
   technicalSkills: {
@@ -41,24 +41,22 @@ export const portfolioData = {
     {
       title: "Full Stack Developer",
       company: "Rebike Mobility GmbH",
-      location: "Munich, Germany",
+      location: "Germany",
       duration: "Nov 2025 – Apr 2026",
-      companyContext:
-        "Rebike Mobility GmbH is Germany's largest recommerce platform for e-bikes. The company professionally refurbishes and resells over 20,000 used e-bikes per year through a TÜV-certified process, selling via rebike.com, partner marketplaces (Decathlon, eBay), and its own flagship stores across Germany. Rebike also offers e-bike subscriptions and rental stations, operating a circular business model focused on sustainability and the mobility transition.",
       description:
-        "Worked in an Agile environment (Jira, Confluence), contributing to production-grade backend systems and middleware architecture for Rebike's Shopify-based e-mobility platform.",
+        "Worked in an Agile environment contributing to production-grade backend systems and middleware architecture for a Shopify-based e-mobility platform.",
       achievements: [
         "Designed and extended middleware services for synchronizing product data with Shopify platforms",
         "Implemented business logic for shipping profiles, product metafields, and payment-provider-based product eligibility",
         "Built and maintained asynchronous processing workflows using AWS SQS, cron jobs, and background workers",
         "Integrated GraphQL APIs for efficient data exchange between backend services and frontend applications",
-        "Contributed to deployment workflows using Bitbucket, Jenkins, Docker image builds, and Kubernetes-based runtime environments",
+        "Contributed to deployment workflows using Bitbucket, Jenkins, Docker, and Kubernetes",
         "Worked with AWS-based production infrastructure including S3, EC2, and load balancing",
         "Utilized PostgreSQL for structured data management and Redis for caching and performance optimization",
-        "Designed and implemented Grafana dashboards for middleware and OMS systems — received recognition for improving system observability",
-        "Developed a full-stack feature for store location display, including backend logic and frontend UI with map integration",
-        "Contributed to a custom checkout application using TypeScript and Bun, implementing eligibility-based logic to dynamically enable or disable checkout for specific bikes",
-        "Prototyped an AI-powered chatbot using Retrieval-Augmented Generation (RAG) to improve product information accessibility for customers"
+        "Designed Grafana dashboards for middleware and OMS systems — received recognition for improving system observability",
+        "Developed a full-stack feature for store location display with map integration",
+        "Contributed to a custom checkout application using TypeScript and Bun",
+        "Prototyped an AI-powered RAG chatbot to improve product information accessibility"
       ],
       technologies: ["TypeScript", "Node.js", "Bun", "PHP", "PostgreSQL", "Redis", "AWS SQS", "AWS S3", "AWS EC2", "GraphQL", "Docker", "Kubernetes", "Jenkins", "Bitbucket", "Grafana", "Shopify Admin API", "Shopify Storefront API", "Jira", "Confluence"]
     },
@@ -135,10 +133,8 @@ export const portfolioData = {
 
   achievements: [
     "Worked on production-grade backend systems and middleware architecture at Rebike Mobility GmbH",
-    "Designed middleware services for synchronizing product data with Shopify platforms at Rebike",
     "Received recognition for designing Grafana dashboards that improved system observability",
     "Prototyped an AI-powered RAG chatbot for product information accessibility",
-    "Developed a full-stack feature for store location display with map integration",
     "Earned Salesforce Certified Administrator and AI Associate credentials in 2025",
     "Achieved AWS Data Analytics certification"
   ],
