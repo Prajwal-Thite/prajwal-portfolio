@@ -12,7 +12,7 @@ A modern, animated personal portfolio website built with React and TypeScript, f
 - **About Me** — Interactive flip cards with certifications and personal interests
 - **Skills** — Filterable skill grid across Frontend, Backend, APIs, AI/ML, DevOps, Agile, and Tools
 - **Projects** — 9 projects categorized into Web, AI/ML, and Mobile with modal detail views
-- **Experience Timeline** — Expandable cards with achievements and tech stacks for 4 professional roles
+- **Experience Timeline** — Expandable cards with achievements, tech stacks, and company links for 4 professional roles
 - **Education** — Academic background and coursework
 - **Contact** — Email form powered by EmailJS
 - **AI Chatbot** — Floating portfolio assistant powered by Groq SDK
