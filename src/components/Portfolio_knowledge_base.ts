@@ -47,7 +47,7 @@ export const portfolioData: PortfolioData = {
     name: "Prajwal Thite",
     title: "Full Stack Developer",
     summary:
-      "Prajwal is a Full Stack Developer with a stronger focus on backend development and around 2.5 years of combined professional experience. He is experienced in building reliable backend systems, solving business logic problems, and developing features that connect different parts of an application. He has worked on backend services and system integrations for Shopify-based platforms, including APIs, queue-based workflows, deployment processes, and monitoring in production environments. He is also interested in AI-driven applications such as RAG systems and backend automation."
+      "Prajwal is a Full Stack Developer with a stronger focus on backend development and 3+ years of hands-on software development experience across professional roles, internships, and advanced academic projects. He is focused on building reliable systems, solving business logic problems, and developing features that connect different parts of an application. He is experienced in API integrations, asynchronous workflows, deployment-related processes, and monitoring across modern web platforms. He is particularly drawn to AI-enabled products, AI-supported development workflows, and backend automation."
   },
 
   technicalSkills: {
@@ -119,10 +119,10 @@ experience: [
   {
     title: "Full Stack Developer",
     company: "Rebike Mobility GmbH",
-    location: "Germany",
+    location: "Munich, Germany",
     duration: "Nov 2025 – Apr 2026",
     description:
-      "Worked in an Agile environment contributing to production-grade backend systems and middleware architecture for a Shopify-based e-mobility platform. Designed middleware services, asynchronous workflows with AWS SQS, Grafana monitoring dashboards, and prototyped a RAG-based AI chatbot.",
+      "Worked in an Agile environment (Jira, Confluence), contributing to production-grade backend systems and middleware architecture for Rebike's Shopify-based e-mobility platform. Designed middleware services, asynchronous workflows with AWS SQS, Grafana monitoring dashboards, and prototyped a RAG-based AI chatbot.",
     technologies: [
       "TypeScript", "Node.js", "Bun", "PHP", "PostgreSQL", "Redis",
       "AWS SQS", "AWS S3", "AWS EC2", "GraphQL", "Docker", "Kubernetes",
@@ -171,9 +171,11 @@ experience: [
 
   achievements: [
     "Worked on production-grade backend systems and middleware architecture at Rebike Mobility GmbH",
+    "Designed middleware services for synchronizing product data with Shopify platforms at Rebike",
     "Received recognition for designing Grafana dashboards that improved system observability for middleware and OMS systems",
     "Prototyped an AI-powered RAG chatbot to improve product information accessibility for customers",
     "Contributed to custom checkout application using TypeScript and Bun with eligibility-based logic",
+    "Developed a full-stack feature for store location display with map integration",
     "Earned the Salesforce Certified Administrator and AI Associate credentials in 2025",
     "Achieved AWS Data Analytics certification, demonstrating proficiency in cloud-based data solutions",
     "Contributed to open-source projects on GitHub",
