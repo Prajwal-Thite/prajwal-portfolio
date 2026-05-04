@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Calendar, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
+import { Calendar, MapPin, ChevronDown, ChevronUp, Globe } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import TechBadge from '@/components/TechBadge';
@@ -15,6 +15,7 @@ interface Experience {
   achievements: string[];
   technologies: string[];
   companyType?: string;
+  companyLinks?: { label: string; url: string }[];
 }
 
 const experiences: Experience[] = [
@@ -22,7 +23,7 @@ const experiences: Experience[] = [
   id: '0',
   role: 'Full Stack Developer',
   company: 'Rebike Mobility GmbH',
-  location: 'Germany',
+  location: 'Munich, Germany',
   duration: 'Nov 2025 - Apr 2026',
   description: 'Worked in an Agile environment contributing to production-grade backend systems and middleware architecture for a Shopify-based e-mobility platform.',
   achievements: [
@@ -39,7 +40,8 @@ const experiences: Experience[] = [
     'Prototyped an AI-powered chatbot using Retrieval-Augmented Generation (RAG) to improve product information accessibility for customers'
   ],
   technologies: ['TypeScript', 'Node.js', 'Bun', 'PHP', 'PostgreSQL', 'Redis', 'AWS SQS', 'AWS S3', 'AWS EC2', 'GraphQL', 'Docker', 'Kubernetes', 'Jenkins', 'Bitbucket', 'Grafana', 'Shopify Admin API', 'Shopify Storefront API', 'Jira', 'Confluence'],
-  companyType: 'E-Mobility & Tech'
+  companyType: 'E-Mobility & Tech',
+  companyLinks: [{ label: 'rebike.com', url: 'https://www.rebike.com/' }]
 },
 {
   id: '1',
@@ -57,7 +59,11 @@ const experiences: Experience[] = [
     'Assisted in setting up CI/CD workflows and deployment automation using GitHub Actions'
   ],
   technologies: ['React', 'TypeScript', 'Node.js', 'Kubernetes', "MySQL", "Express.js", "Tailwind CSS", "REST APIs", "Shopify Payments", 'Cloudinary', "GraphQL", 'Google Analytics', 'Stripe', 'Framer Motion'],
-  companyType: 'IT Services and Consulting'
+  companyType: 'IT Services and Consulting',
+  companyLinks: [
+    { label: 'Parachute Home', url: 'https://parachutehome.com/' },
+    { label: 'JUNOCO', url: 'https://www.junoco.com/' }
+  ]
 },
 {
   id: '2',
@@ -122,13 +128,24 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{experience.role}</h3>
-                <div className="flex items-center text-blue-600 font-semibold mb-2">
+                <div className="flex items-center flex-wrap gap-2 text-blue-600 font-semibold mb-2">
                   <span>{experience.company}</span>
                   {experience.companyType &&
-                  <span className="ml-2 text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded-full">
+                  <span className="text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded-full">
                       {experience.companyType}
                     </span>
                   }
+                  {experience.companyLinks?.map(({ label, url }) =>
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors font-medium">
+                      <Globe className="w-3 h-3"/>
+                      {label}
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
